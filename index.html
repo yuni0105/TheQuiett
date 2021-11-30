@@ -29,30 +29,40 @@
         #nav{width:100%; height:100px; margin:0; z-index:3; 
         position:absolute; top:0; left:0; right:0; bottom:0;    
         background-color:}
-        .nav {width:1000px; height:90px; margin-left:200px; z-index:3;
+        .nav {width:550px; height:90px; margin:0 auto; z-index:3;
             position:absolute; top:0; left:0; right:0; bottom:0; 
              background-color: }
-        .nav ul li{float:left; margin:28px; font-size:20px; font-family: 'IBMPlexSansKR-Bold'; color:white;}
+        .nav ul li{float:left; margin:28px; font-size:15px; font-family: 'IBMPlexSansKR-Bold'; color:white;}
         .nav li a:hover{color:hotpink;}
         
 
-        #logo{width:100px; height:100px; background-color: }
-        #logo img{width:100px; height:100px;}
+        #logo{width:150px; height:120px; margin: -10px 0 0 150px; background-color: }
+        #logo img{width:100%; height:100%;}
        
-        #slider{width:100%; height:937px; margin:0 auto; z-index:1; background-color:black;}
-        #slider video{width:100%; height:937px; margin:0 auto;}
-        
-       
-        #new {width:100%; height:600px; margin:0 auto; background-color: cornflowerblue;}
-        .album_text{width:300px; height:100px; margin:0 auto; background-color: }
-        .album_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
-       
-        #store{width:100%; height: 1190px; margin:0 auto; background-color: darkcyan;}
-        .store_text{width:300px; height:100px; margin:0 auto; background-color: }
-        .store_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
+        #sns{width:120px; height:50px; margin:0 auto; z-index:3; float:right; position:relative; right:200px; bottom: 90px; background-color: }
+        #sns img{width:30px; height:auto; margin-left:20px;}
 
-        #shows{width:100%; height: 940px; margin:0 auto; background-color:dimgrey;}
-        .shows_texts{width:300px; height:100px; margin:0 auto; background-color: }
+        #slider{width:100%; height: 500px;px; margin:0 auto; z-index:1; background-color:black;}
+        #slider video{width:100%; height:auto; margin:0; padding:0;}
+        .sp {width:210px; height:70px; background-color: darkorange; margin:0 auto; position:absolute; top:450px; left:100px;}
+       
+        #contents {width:100%; height:2700px; margin:0 auto; background-color: deeppink;}
+        #new {width:1200px; height:600px; margin:0 auto; background-color: cornflowerblue;}
+        .album_box{width:1000px; height:450px; margin:0 auto; background-color: yellowgreen;}
+        .album_text{width:300px; height:100px; margin:0 auto; background-color:blueviolet;}
+        .album_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
+        .album_p{width:400px; height:200px; margin:100px 40px 0 0px; float:right;  background-color: chartreuse; font-size:18px; color:#666;}
+        .vinyl{width:500px; height:450px; float:left;  background-color:cyan;}
+        .sp2 {width:480px; height:90px; margin-top:50px; background-color: thistle; float:right;}
+        
+        #store{width:1200px; height: 1190px; margin:0 auto; background-color: darkcyan;}
+        .store_text{width:300px; height:100px; margin:0 auto; background-color:beige;}
+        .store_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
+        .store_box{width:550px; height:250px; float:left; margin:20px; background-color: ghostwhite;}
+
+
+        #shows{width:1200px; height: 940px; margin:0 auto; background-color:dimgrey;}
+        .shows_texts{width:300px; height:100px; margin:0 auto; background-color:aquamarine;}
         .shows_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:10px;}
 
         footer{width:100%; height:170px; background-color: black;}
@@ -74,28 +84,69 @@
                 <li><a href="#">Upcoming Shows</a></li>
             </ul>
             </div>
+
+            <div id="sns">
+                <a href="#"><img src="img/facebook.png"></a>
+                <a href="#"><img src="img/insta.png"></a>
+            </div>    
         </div>
 
     </header>
 
     <div id="slider">
+        <div class="sp">
+           
+        </div>
         <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
             <source src="img/glofo.mp4" type="video/mp4">
         </video> 
     </div>
 
     <section>
-        
+    <div id="contents">   
         <div id="new">
+
+            
             <div class="album_text">
                 <h1>New Album</h1>
             </div>
+            
+            <div class="album_box">
+            <div class="album_p">
+                <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
+                    It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
+            </div>
+
+            <div class="vinyl">
+
+            </div>
+
+            <div class="sp2">
+
+            </div>
+        </div>
         </div>
 
 
         <div id="store">
             <div class="store_text">
                 <h1>The Store</h1>
+            </div>
+
+            <div class="store_box">
+
+            </div>
+
+            <div class="store_box">
+                
+            </div>
+
+            <div class="store_box">
+                
+            </div>
+
+            <div class="store_box">
+                
             </div>
         </div>
 
@@ -105,7 +156,7 @@
                 <h1>Upcoming Shows</h1>
             </div>
         </div>
-
+    </div>
     </section>
 
     <footer>
