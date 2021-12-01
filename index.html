@@ -9,8 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    
     <style>
         *{margin:0; padding:0; }
         a{text-decoration: none; color:white; }
@@ -30,10 +37,10 @@
         position:absolute; top:0; left:0; right:0; bottom:0;    
         background-color:}
         .nav {width:550px; height:90px; margin:0 auto; z-index:3;
-            position:absolute; top:0; left:0; right:0; bottom:0; 
+            position:absolute; top:-10px; left:0; right:0; bottom:0; 
              background-color: }
-        .nav ul li{float:left; margin:28px; font-size:15px; font-family: 'IBMPlexSansKR-Bold'; color:white;}
-        .nav li a:hover{color:hotpink;}
+        .nav ul li{float:left; margin:28px; font-size:15px; font-family: 'Oswald', sans-serif; font-size:large; color:white;}
+        .nav li a:hover{color:deeppink;}
         
 
         #logo{width:150px; height:120px; margin: -10px 0 0 150px; background-color: }
@@ -42,23 +49,44 @@
         #sns{width:120px; height:50px; margin:0 auto; z-index:3; float:right; position:relative; right:200px; bottom: 90px; background-color: }
         #sns img{width:30px; height:auto; margin-left:20px;}
 
-        #slider{width:100%; height: 500px;px; margin:0 auto; z-index:1; background-color:black;}
+        #slider{width:100%; height: 700px; margin:0 auto; z-index:1; background-color:black;}
         #slider video{width:100%; height:auto; margin:0; padding:0;}
-        .sp {width:210px; height:70px; background-color: darkorange; margin:0 auto; position:absolute; top:450px; left:100px;}
-       
-        #contents {width:100%; height:2700px; margin:0 auto; background-color: deeppink;}
-        #new {width:1200px; height:600px; margin:0 auto; background-color: cornflowerblue;}
-        .album_box{width:1000px; height:450px; margin:0 auto; background-color: yellowgreen;}
-        .album_text{width:300px; height:100px; margin:0 auto; background-color:blueviolet;}
+        .sp {width:210px; height:70px;  margin:0 auto; position:absolute; top:450px; left:150px; background-color: }
+        .spimg img{width:70px; height:70px; float: left; position: relative; left:10px;}
+        .sp h1{font-size:15px;}
+
+        .spotify{width:130px; height:45px; margin:0 auto; float:right; position: relative; top:20px; background-color:  }
+        .sptxt2{width:110px; height:20px; background-color: #37bc5e;
+                border-radius: 40px; margin:0 auto; }            
+        .sptxt2:hover{background-color:#2fd566; cursor: pointer;}        
+        .sp h1,p {text-align: center; font-family:'Outfit', sans-serif; color:white;} 
+        .sp p{font-size: 12px; padding-top: 2px;}    
+
+        #contents {width:100%; height:2700px; margin:0 auto; background-color:black; }
+        #new {width:1200px; height:600px; margin:0 auto; background-color:black; }
+        .album_box{width:1000px; height:450px; margin:0 auto; background-color: }
+        .album_text{width:300px; height:100px; margin:0 auto; background-color:}
         .album_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
-        .album_p{width:400px; height:200px; margin:100px 40px 0 0px; float:right;  background-color: chartreuse; font-size:18px; color:#666;}
-        .vinyl{width:500px; height:450px; float:left;  background-color:cyan;}
-        .sp2 {width:480px; height:90px; margin-top:50px; background-color: thistle; float:right;}
+        
+        .album_text2{width:300px; height:30px; margin:0 auto; position:relative; top:20px; background-color: }
+        .album_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
+
+        .album_p{width:400px; height:200px; margin:100px 40px 0 0px; float:right; font-size:18px; color:#666; font-family: 'Outfit', sans-serif;}
+        .vinyl{width:500px; height:450px; float:left; background-color:;}
+        .vinyl img{width:450px; height:auto; margin:0 auto; }
+
+
+
+        .sp2 {width:480px; height:90px; float:right; }
+        
         
         #store{width:1200px; height: 1190px; margin:0 auto; background-color: darkcyan;}
         .store_text{width:300px; height:100px; margin:0 auto; background-color:beige;}
         .store_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
-        .store_box{width:550px; height:250px; float:left; margin:20px; background-color: ghostwhite;}
+        .store_box{width:550px; height:250px; float:left; margin:25px; position:relative; top: 100px; background-color: tomato;}
+        .store_text2{width:300px; height:30px; margin:0 auto; position:relative; top:20px; background-color: }
+        .store_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
+
 
 
         #shows{width:1200px; height: 940px; margin:0 auto; background-color:dimgrey;}
@@ -67,6 +95,8 @@
 
         footer{width:100%; height:170px; background-color: black;}
     </style>
+
+
 </head>
 <body>
     <header>
@@ -95,7 +125,19 @@
 
     <div id="slider">
         <div class="sp">
-           
+            
+            <div class="spimg">
+                <img src="img/Q.png">
+            </div>
+                <div class="spotify">
+                    <div class="sptxt">
+                    <h1>The Quiett</h1>
+                    </div>
+
+                    <div class="sptxt2">
+                    <p>팔로우하기</p>
+                    </div>
+                </div>
         </div>
         <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
             <source src="img/glofo.mp4" type="video/mp4">
@@ -110,6 +152,9 @@
             <div class="album_text">
                 <h1>New Album</h1>
             </div>
+            <div class="album_text2">
+                <h1>GLOW FOREVER - OUT NOW </h1>
+            </div>
             
             <div class="album_box">
             <div class="album_p">
@@ -118,12 +163,12 @@
             </div>
 
             <div class="vinyl">
-
+                <img src="img/vinyl.png">
             </div>
 
             <div class="sp2">
-
-            </div>
+                <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>    
         </div>
         </div>
 
@@ -131,6 +176,10 @@
         <div id="store">
             <div class="store_text">
                 <h1>The Store</h1>
+            </div>
+
+            <div class="store_text2">
+                <h1>SHOP NOW</h1>
             </div>
 
             <div class="store_box">
