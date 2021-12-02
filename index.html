@@ -49,9 +49,10 @@
         #sns{width:120px; height:50px; margin:0 auto; z-index:3; float:right; position:relative; right:200px; bottom: 90px; background-color: }
         #sns img{width:30px; height:auto; margin-left:20px;}
 
-        #slider{width:100%; height: 700px; margin:0 auto; z-index:1; background-color:black;}
+
+        #slider{width:100%; height: 900px; margin:0 auto; z-index:1; background-color:black;}
         #slider video{width:100%; height:auto; margin:0; padding:0;}
-        .sp {width:210px; height:70px;  margin:0 auto; position:absolute; top:450px; left:150px; background-color: }
+        .sp {width:210px; height:70px;  margin:0 auto; position:relative; top:600px; left: 150px; float:left; background-color:; }
         .spimg img{width:70px; height:70px; float: left; position: relative; left:10px;}
         .sp h1{font-size:15px;}
 
@@ -59,12 +60,20 @@
         .sptxt2{width:110px; height:20px; background-color: #37bc5e;
                 border-radius: 40px; margin:0 auto; }            
         .sptxt2:hover{background-color:#2fd566; cursor: pointer;}        
-        .sp h1,p {text-align: center; font-family:'Outfit', sans-serif; color:white;} 
+        .sp h1,p { font-family:'Outfit', sans-serif; color:white;} 
         .sp p{font-size: 12px; padding-top: 2px;}    
 
+
         #contents {width:100%; height:2700px; margin:0 auto; background-color:black; }
-        #new {width:1200px; height:600px; margin:0 auto; background-color:black; }
-        .album_box{width:1000px; height:450px; margin:0 auto; background-color: }
+        
+        .test1{width:350px; height:400px; margin:0 auto; float:left;}
+        .test1 img{width:100%; height:auto; position:relative; top:30px; left:50px; }
+        .test2{width:300px; height:400px; margin:0 auto; float:right;position:relative; top:400px;}    
+        .test2 img{width:100%; height:auto; float:right; }
+
+
+        #new {width:100%; height:700px; margin:0 auto; background-color: black; }
+        .album_box{width:1100px; height:450px; margin:0 auto; background-color:}
         .album_text{width:300px; height:100px; margin:0 auto; background-color:}
         .album_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
         
@@ -72,24 +81,50 @@
         .album_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
 
         .album_p{width:400px; height:200px; margin:100px 40px 0 0px; float:right; font-size:18px; color:#666; font-family: 'Outfit', sans-serif;}
-        .vinyl{width:500px; height:450px; float:left; background-color:;}
-        .vinyl img{width:450px; height:auto; margin:0 auto; }
+        .vinyl{width:450px; height:450px; float:left; margin:0 auto; }
+        .vinyl img{width:450px; height:auto; margin:0 auto;}
 
-
-
-        .sp2 {width:480px; height:90px; float:right; }
+        .sp2 {width:480px; height:90px; float:right; margin:0 auto; position:relative; right:20px; background-color: }
         
         
-        #store{width:1200px; height: 1190px; margin:0 auto; background-color: darkcyan;}
-        .store_text{width:300px; height:100px; margin:0 auto; background-color:beige;}
+        #store{width:100%; height: 1190px; margin:0 auto; background-color: #000754;}
+        .store_text{width:300px; height:100px; margin:0 auto; 
+            position:relative; top:30px;
+            background-color:;}
         .store_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
-        .store_box{width:550px; height:250px; float:left; margin:25px; position:relative; top: 100px; background-color: tomato;}
-        .store_text2{width:300px; height:30px; margin:0 auto; position:relative; top:20px; background-color: }
+
+        #store_box{width:1300px; height:1000px; margin:0 auto; background-color: ;}
+
+        .store_box{width:600px; height:400px; float:left; margin:25px; position:relative; top: 100px; background-color: white;}
+        .store_text2{width:300px; height:30px; margin:0 auto; position:relative; top:40px; background-color: }
         .store_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
 
+        .store_box p,h4 {color:black;}
+        .store_box p{font-size: small;}
 
+       
+       
 
-        #shows{width:1200px; height: 940px; margin:0 auto; background-color:dimgrey;}
+        .box1{width:290px; height:400px;  float:left; background-color:;}
+        .box1 img {width:290px; height:auto; margin-top:50px;}
+        .box2{width:290px; height:160px; float:right; margin-top:130px; position:relative; right:30px;
+            background-color:; }
+
+        .box_in{width:280px; height:140px; 
+            background-color: ;}
+        
+        #cart{width:150px; height:40px; margin:0 auto; 
+            position:relative; left:30px; bottom:25px; 
+            background-color: }
+           
+
+        .cart{width:100px; height:30px; background-color: #ee2851; border-radius: 30px; font-size: small; color:white; text-align: center;}
+        
+        .cart2{width:40px; height:40px;  
+            float:right; position:relative; bottom:30px; }
+        .cart2 img{width:30px; height:auto; margin:0 auto;}
+
+        #shows{width:100%; height: 940px; margin:0 auto; background-color:dimgrey;}
         .shows_texts{width:300px; height:100px; margin:0 auto; background-color:aquamarine;}
         .shows_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:10px;}
 
@@ -124,9 +159,8 @@
     </header>
 
     <div id="slider">
-        <div class="sp">
-            
-            <div class="spimg">
+       <div class="sp">
+           <div class="spimg">
                 <img src="img/Q.png">
             </div>
                 <div class="spotify">
@@ -145,10 +179,19 @@
     </div>
 
     <section>
-    <div id="contents">   
-        <div id="new">
+                
+    <div id="contents">
 
+        
+        <div id="new">
+            <div class="test1">
+                <img src="img/test.png">
+            </div>
             
+            <div class="test2">
+                <img src="img/test2.png">
+            </div>
+                        
             <div class="album_text">
                 <h1>New Album</h1>
             </div>
@@ -157,19 +200,19 @@
             </div>
             
             <div class="album_box">
-            <div class="album_p">
-                <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
-                    It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
-            </div>
+                <div class="album_p">
+                    <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
+                        It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
+                </div>
 
-            <div class="vinyl">
-                <img src="img/vinyl.png">
-            </div>
+                <div class="vinyl">
+                    <img src="img/vinyl.png" alt="vinyl">
+                </div>
 
-            <div class="sp2">
-                <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-            </div>    
-        </div>
+                <div class="sp2">
+                    <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>    
+            </div>
         </div>
 
 
@@ -182,22 +225,104 @@
                 <h1>SHOP NOW</h1>
             </div>
 
-            <div class="store_box">
+            <div id="store_box">
+                <div class="store_box">
+                    <div class="box1">
+                        <img src="img/vinyl1.png" alt="glofovinyl">
+                    </div>
 
-            </div>
+                    <div class="box2">
+                        <div class="box_in">
+                            <p><b>VINYL</b></p>
+                            <h4>glow forever - vinyl</h4>
+                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                            <br>
+                            <h4>krw 41,500</h4>
+                            <div id="cart">    
+                                <div class="cart">
+                                    ADD TO CART
+                                </div>
+                                <div class="cart2">
+                                    <img src="img/heart.png" alt="heart">
+                                </div>
+                            </div> 
+                        </div>       
+                    </div>
+                </div>
 
-            <div class="store_box">
-                
-            </div>
+                <div class="store_box">
+                    <div class="box1">
+                        <img src="img/vinyl2.png" alt="glofovinyl2">            
+                    </div>
 
-            <div class="store_box">
-                
-            </div>
+                    <div class="box2">
+                        <div class="box_in">
+                            <p><b>VINYL</b></p>
+                            <h4>glow forever - instrumentals vinyl</h4>
+                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                            <br>
+                            <h4>krw 37,500</h4>
+                            <div id="cart">
+                                <div class="cart">
+                                    ADD TO CART
+                                </div>
+                                <div class="cart2">
+                                    <img src="img/heart.png" alt="heart">
+                                </div>
+                            </div>
+                        </div>        
+                    </div>    
+                </div>
 
-            <div class="store_box">
-                
+                <div class="store_box">
+                    <div class="box1">
+                        <img src="img/hood.png" alt="hood">
+                    </div>
+
+                    <div class="box2">
+                        <div class="box_in">
+                            <p><b>CLOTHING</b></p>
+                            <h4>glow forever - crew neck shirts</h4>
+                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                            <br>
+                            <h4>krw 75,000</h4>
+                            <div id="cart">
+                                <div class="cart">
+                                    ADD TO CART
+                                </div>
+                                <div class="cart2">
+                                    <img src="img/heart.png" alt="heart">
+                                </div>
+                            </div>  
+                        </div>      
+                    </div>    
+                </div>
+
+                <div class="store_box">
+                    <div class="box1">
+                        <img src="img/sweat.png" alt="sweat">
+                    </div>
+
+                    <div class="box2">
+                        <div class="box_in">
+                            <p><b>CLOTHING</b></p>
+                            <h4>glow forever - hoodie loyal blue</h4>
+                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                            <br>
+                            <h4>krw 55,000</h4>
+                            <div id="cart">
+                                <div class="cart">
+                                    ADD TO CART
+                                </div>
+                                <div class="cart2">
+                                    <img src="img/heart.png" alt="heart">
+                                </div>    
+                            </div>
+                        </div>    
+                    </div>    
+                </div>
             </div>
-        </div>
+            </div>
 
 
         <div id="shows">
