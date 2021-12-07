@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Quiett</title>
+    <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,324 +17,391 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    
+
     <style>
-        *{margin:0; padding:0; }
-        a{text-decoration: none; color:white; }
-        ul,li,ol{list-style:none;}
 
-
-        @font-face {
+            @font-face {
             font-family: 'IBMPlexSansKR-Bold';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
             font-weight: normal;
             font-style: normal;
+            }
+
+
+        *{margin:0; padding:0; box-sizing:border-box;}
+        ul,ol, li {list-style: none;}
+        a{text-decoration: none;
+        color:white;
         }
 
+        a:hover{color:hotpink;}
+
+        li::before {
+        content: '';
+        width: 4%;
+        position: absolute;
+        top:50%;
+        height: 1px;
+        background: hotpink;
+        display: block;
+        -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+        transform-origin: right top;
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+        transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+        }
+        
+        li:hover::before {
+        -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+        transform-origin: left top;
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1)
+        }
 
         
-        #nav{width:100%; height:100px; margin:0; z-index:3; 
-        position:absolute; top:0; left:0; right:0; bottom:0;    
-        background-color:}
-        .nav {width:550px; height:90px; margin:0 auto; z-index:3;
-            position:absolute; top:-10px; left:0; right:0; bottom:0; 
-             background-color: }
-        .nav ul li{float:left; margin:28px; font-size:15px; font-family: 'Oswald', sans-serif; font-size:large; color:white;}
-        .nav li a:hover{color:deeppink;}
-        
 
-        #logo{width:150px; height:120px; margin: -10px 0 0 150px; background-color: }
-        #logo img{width:100%; height:100%;}
-       
-        #sns{width:120px; height:50px; margin:0 auto; z-index:3; float:right; position:relative; right:200px; bottom: 90px; background-color: }
-        #sns img{width:30px; height:auto; margin-left:20px;}
+        .container{width:100%; height:100%; margin:0 auto; position: relative;}
+
+        #top{position:relative;}
+    
+        header{width:100%; height:100px; z-index:3; 
+            position:absolute; top:0; left:0;right:0; bottom:0; background-color: ;}
 
 
-        #slider{width:100%; height: 900px; margin:0 auto; z-index:1; background-color:black;}
-        #slider video{width:100%; height:auto; margin:0; padding:0;}
-        .sp {width:210px; height:70px;  margin:0 auto; position:relative; top:600px; left: 150px; float:left; background-color:; }
-        .spimg img{width:70px; height:70px; float: left; position: relative; left:10px;}
-        .sp h1{font-size:15px;}
+        header .container{position:relative;}    
+        #logo{width:70px; height:70px; float:left; background-color: }
+        #logo img{width:50px; height:50px; margin-left:10px; }
 
-        .spotify{width:130px; height:45px; margin:0 auto; float:right; position: relative; top:20px; background-color:  }
-        .sptxt2{width:110px; height:20px; background-color: #37bc5e;
-                border-radius: 40px; margin:0 auto; }            
-        .sptxt2:hover{background-color:#2fd566; cursor: pointer;}        
-        .sp h1,p { font-family:'Outfit', sans-serif; color:white;} 
-        .sp p{font-size: 12px; padding-top: 2px;}    
+        nav{width:100%; height:50px;
+            font-family: 'Oswald', sans-serif; background-color:;}
+        ul,li,ol {float:left; margin:10px 28px; font-size:20px; font-family: 'Oswald', sans-serif;}
 
+        #sns {width:200px; height:50px; 
+                position:absolute;
+                top:0; right:0;
+                z-index:3;
+                float:right;
+                background-color: ;}
+        #sns img{width:30px; height:auto; margin:10px;}
 
-        #contents {width:100%; height:2700px; margin:0 auto; background-color:black; }
-        
-        .test1{width:350px; height:400px; margin:0 auto; float:left;}
-        .test1 img{width:100%; height:auto; position:relative; top:30px; left:50px; }
-        .test2{width:300px; height:400px; margin:0 auto; float:right;position:relative; top:400px;}    
-        .test2 img{width:100%; height:auto; float:right; }
+        #sns img:hover{opacity: 0.5;]}
 
 
-        #new {width:100%; height:700px; margin:0 auto; background-color: black; }
-        .album_box{width:1100px; height:450px; margin:0 auto; background-color:}
-        .album_text{width:300px; height:100px; margin:0 auto; background-color:}
-        .album_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
-        
-        .album_text2{width:300px; height:30px; margin:0 auto; position:relative; top:20px; background-color: }
-        .album_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
+        #slider{width:100%; height:900px;  z-index:1; background-color:black;}
+        #slider video{width:100%; height:auto;}
 
-        .album_p{width:400px; height:200px; margin:100px 40px 0 0px; float:right; font-size:18px; color:#666; font-family: 'Outfit', sans-serif;}
-        .vinyl{width:450px; height:450px; float:left; margin:0 auto; }
-        .vinyl img{width:450px; height:auto; margin:0 auto;}
 
-        .sp2 {width:480px; height:90px; float:right; margin:0 auto; position:relative; right:20px; background-color: }
-        
-        
-        #store{width:100%; height: 1190px; margin:0 auto; background-color: #000754;}
-        .store_text{width:300px; height:100px; margin:0 auto; 
-            position:relative; top:30px;
-            background-color:;}
-        .store_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:30px;}
 
-        #store_box{width:1300px; height:1000px; margin:0 auto; background-color: ;}
 
-        .store_box{width:600px; height:400px; float:left; margin:25px; position:relative; top: 100px; background-color: white;}
-        .store_text2{width:300px; height:30px; margin:0 auto; position:relative; top:40px; background-color: }
-        .store_text2 h1{text-align: center; font-family: 'Oswald', sans-serif; color:white;}
 
-        .store_box p,h4 {color:black;}
-        .store_box p{font-size: small;}
 
-       
-       
+        section{width:100%; height:2700px; background-color: black;}
+        .title{width:300px; height:70px; margin-top:20px; background-color: y;}
 
-        .box1{width:290px; height:400px;  float:left; background-color:;}
-        .box1 img {width:290px; height:auto; margin-top:50px;}
-        .box2{width:290px; height:160px; float:right; margin-top:130px; position:relative; right:30px;
+        .title h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; }
+        .title h2{text-align: center; font-family: 'Oswald', sans-serif; color:white; }
+        .product2 p{font-size: small;}
+        .new{width:1100px; height:650px; 
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin:0 auto;
+            background-color:;
+            }
+
+        #new_title{width:300px; height:180px; margin:0 auto; 
+            display: flex; flex-wrap: wrap; 
+            justify-content: center;
+            align-content: center;
             background-color:; }
+       
+        #new_box {width:600px; height:500px;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;                        
+                    flex-direction: column;   
+                    background-color: ;}
 
-        .box_in{width:280px; height:140px; 
-            background-color: ;}
+                    
+        #new_box .box1{width:500px; height: 500px;  background-color: }
+        #new_box .box1 img{width:500px; height:auto;} 
+
+        #new_box .box2{width:500px; height:150px;
+                            font-family: 'Outfit', sans-serif;
+                            color:white;
+                            background-color:;}
+
+        #new_box .box3{width:450px; height:100px;  justify-content: end;}
+
+        .store{width:100%; height:1200px; 
+             background-color:black; }
+
+        #store_title{width:300px; height:180px; margin:0 auto; 
+            display: flex; flex-wrap: wrap; 
+            justify-content: center;
+            align-content: center;
+            background-color:; }            
         
-        #cart{width:150px; height:40px; margin:0 auto; 
-            position:relative; left:30px; bottom:25px; 
-            background-color: }
-           
 
-        .cart{width:100px; height:30px; background-color: #ee2851; border-radius: 30px; font-size: small; color:white; text-align: center;}
+        #store_box{width:100%; height:1000px; 
+            margin:0 auto;
+            display: flex; flex-wrap:wrap;
+            justify-content: center;
+            background-color:;}
         
-        .cart2{width:40px; height:40px;  
-            float:right; position:relative; bottom:30px; }
-        .cart2 img{width:30px; height:auto; margin:0 auto;}
+        .box_vinyl{width:68%; height:500px; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    background-color: ;}
 
-        #shows{width:100%; height: 940px; margin:0 auto; background-color:dimgrey;}
-        .shows_texts{width:300px; height:100px; margin:0 auto; background-color:aquamarine;}
-        .shows_text h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; position:relative; top:10px;}
+                 
+        
+        .box_clothing{width:68%; height:500px; 
+                    display: flex;
+                    align-content: flex-start;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    background-color: ;}    
+             
+  
 
-        footer{width:100%; height:170px; background-color: black;}
+        .store .box{width:600px; height:350px; 
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    }
+
+        .product{width:300px; height:250px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    background-color:;}
+
+        .product img{width:300px; height:auto; }
+
+        .product2{width:300px; height:250px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color:;}
+        
+
+        .cart_box{width:280px; height:40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: ;}
+        .cart{width:100px; height:30px; background-color: #ee2851; border-radius: 30px; 
+            font-size: small; color:white; 
+            text-align: center;}
+        .cart p{margin-top: 5px;}                  
+
+        .heart{width:70px; height:30px; background-color:;}
+        .heart img{width:30px; height:auto;}
+
+                  
+
+        .shows{width:100%; height:940px; background-color: mediumvioletred;}
+
+        footer{width:100%; height:400px; background-color: lightgrey;}
+
     </style>
-
-
 </head>
+
 <body>
-    <header>
-        
-        <div id="nav">
-            <div id="logo">
-                <img src="img/logo.png">
-            </div>
-
-            <div class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">New Album</a></li>
-                <li><a href="#">The Store</a></li>
-                <li><a href="#">Upcoming Shows</a></li>
-            </ul>
-            </div>
-
-            <div id="sns">
-                <a href="#"><img src="img/facebook.png"></a>
-                <a href="#"><img src="img/insta.png"></a>
-            </div>    
-        </div>
-
-    </header>
-
-    <div id="slider">
-       <div class="sp">
-           <div class="spimg">
-                <img src="img/Q.png">
-            </div>
-                <div class="spotify">
-                    <div class="sptxt">
-                    <h1>The Quiett</h1>
-                    </div>
-
-                    <div class="sptxt2">
-                    <p>팔로우하기</p>
-                    </div>
+    <div id="top">
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <a href="#"><img src="img/logo2.png" alt="logo"></a>
                 </div>
+
+                <nav>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ARTIST</a></li>
+                    <li><a href="#">PAGES</a></li>
+                    <li><a href="#">RELEASES</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">SHOP</a></li>
+                </nav>
+
+                <div id="sns">
+                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                    <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                </div>
+            </div>
+        </header>
+
+
+        <div id="slider">
+            <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
+                <source src="img/glofo.mp4" type="video/mp4">
+            </video> 
         </div>
-        <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
-            <source src="img/glofo.mp4" type="video/mp4">
-        </video> 
     </div>
 
     <section>
-                
-    <div id="contents">
-
-        
-        <div id="new">
-            <div class="test1">
-                <img src="img/test.png">
-            </div>
+        <div class="container">
             
-            <div class="test2">
-                <img src="img/test2.png">
-            </div>
-                        
-            <div class="album_text">
-                <h1>New Album</h1>
-            </div>
-            <div class="album_text2">
-                <h1>GLOW FOREVER - OUT NOW </h1>
-            </div>
-            
-            <div class="album_box">
-                <div class="album_p">
-                    <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
-                        It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
-                </div>
-
-                <div class="vinyl">
-                    <img src="img/vinyl.png" alt="vinyl">
-                </div>
-
-                <div class="sp2">
-                    <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <div id="new_title">
+                    <div class="title"><h1>New Album</h1></div>
+                    <div class="title"><h2>GLOW FOREVER - OUT NOW</h2></div>
                 </div>    
-            </div>
-        </div>
 
-
-        <div id="store">
-            <div class="store_text">
-                <h1>The Store</h1>
-            </div>
-
-            <div class="store_text2">
-                <h1>SHOP NOW</h1>
-            </div>
-
-            <div id="store_box">
-                <div class="store_box">
-                    <div class="box1">
-                        <img src="img/vinyl1.png" alt="glofovinyl">
-                    </div>
-
-                    <div class="box2">
-                        <div class="box_in">
-                            <p><b>VINYL</b></p>
-                            <h4>glow forever - vinyl</h4>
-                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                            <br>
-                            <h4>krw 41,500</h4>
-                            <div id="cart">    
-                                <div class="cart">
-                                    ADD TO CART
-                                </div>
-                                <div class="cart2">
-                                    <img src="img/heart.png" alt="heart">
-                                </div>
-                            </div> 
-                        </div>       
-                    </div>
+            <div class="new">
+                <div id="new_box">
+                    <div class="box1"><img src="img/vinyl.png" alt="vinyl"></div>
                 </div>
-
-                <div class="store_box">
-                    <div class="box1">
-                        <img src="img/vinyl2.png" alt="glofovinyl2">            
-                    </div>
-
+                
+                <div id="new_box">
                     <div class="box2">
-                        <div class="box_in">
-                            <p><b>VINYL</b></p>
-                            <h4>glow forever - instrumentals vinyl</h4>
-                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                            <br>
-                            <h4>krw 37,500</h4>
-                            <div id="cart">
-                                <div class="cart">
-                                    ADD TO CART
+                        <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
+                            It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
+                    </div>
+                    <div class="box3"><iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+                </div>
+            </div>
+
+            <div class="store">
+                <div id="store_title">
+                    <div class="title"><h1>The Store</h1></div>
+                    <div class="title"><h2>SHOP NOW</h2></div>
+                </div> 
+                
+                <div id="store_box">
+
+                    <div class="box_vinyl">                    
+                            <div class="box">
+                                <div class="product">
+                                    <img src="img/vinyl1.png" alt="vinyl1">
                                 </div>
-                                <div class="cart2">
-                                    <img src="img/heart.png" alt="heart">
+
+                                <div class="product2">
+                                    <p><b>VINYL</b></p>
+                                    <h4>glow forever - vinyl</h4>
+                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                    <br>
+                                    
+                                    <div class="cart_box">
+                                        <h4>krw 41,500</h4>
+                                        <div class="cart">
+                                            <p>ADD TO CART</p>
+                                        </div>
+
+                                        <div class="heart">
+                                            <img src="img/heart.png">
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                        </div>        
-                    </div>    
-                </div>
 
-                <div class="store_box">
-                    <div class="box1">
-                        <img src="img/hood.png" alt="hood">
-                    </div>
-
-                    <div class="box2">
-                        <div class="box_in">
-                            <p><b>CLOTHING</b></p>
-                            <h4>glow forever - crew neck shirts</h4>
-                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                            <br>
-                            <h4>krw 75,000</h4>
-                            <div id="cart">
-                                <div class="cart">
-                                    ADD TO CART
+                            <div class="box">
+                                <div class="product">
+                                    <img src="img/vinyl2.png" alt="vinyl2">
                                 </div>
-                                <div class="cart2">
-                                    <img src="img/heart.png" alt="heart">
-                                </div>
-                            </div>  
-                        </div>      
-                    </div>    
-                </div>
 
-                <div class="store_box">
-                    <div class="box1">
-                        <img src="img/sweat.png" alt="sweat">
-                    </div>
+                                <div class="product2">
+                                    <p><b>VINYL</b></p>
+                                    <h4>glow forever - instrumentals vinyl</h4>
+                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                    <br>
+                                    <div class="cart_box">
+                                    <h4>krw 37,500</h4>
+                                    
+                                        <div class="cart">
+                                            <p>ADD TO CART</p>
+                                        </div>
 
-                    <div class="box2">
-                        <div class="box_in">
-                            <p><b>CLOTHING</b></p>
-                            <h4>glow forever - hoodie loyal blue</h4>
-                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                            <br>
-                            <h4>krw 55,000</h4>
-                            <div id="cart">
-                                <div class="cart">
-                                    ADD TO CART
+                                        <div class="heart">
+                                            <img src="img/heart.png">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="cart2">
-                                    <img src="img/heart.png" alt="heart">
-                                </div>    
                             </div>
+
+                    </div>
+                    <div class="box_clothing">    
+                        <div class="box">
+
+                            
+                                <div class="product">
+                                    <img src="img/hood.png" alt="hoodie">                    
+                                </div>
+
+                                <div class="product2">
+                                    <p><b>CLOTHING</b></p>
+                                    <h4>glow forever - crew neck shirts</h4>
+                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                    <br>
+                                    
+                                    <div class="cart_box">
+                                        <h4>krw 75,000</h4>
+                                        <div class="cart">
+                                            <p>ADD TO CART</p>
+                                        </div>
+
+                                        <div class="heart">
+                                            <img src="img/heart.png">
+                                        </div>
+                                    </div>                            
+                                </div>
+                            
+
+                        </div>
+                    
+
+                        <div class="box">
+                            <div class="product">
+                                <img src="img/sweat.png" alt="mtm">
+                            </div>
+
+                            <div class="product2">
+                                <p><b>CLOTHING</b></p>
+                                <h4>glow forever - hoodie loyal blue</h4>
+                                <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                <br>
+                                
+                                <div class="cart_box">
+                                    <h4>krw 55,000</h4>
+                                    <div class="cart">
+                                        <p>ADD TO CART</p>
+                                    </div>
+
+                                    <div class="heart">
+                                        <img src="img/heart.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                         </div>    
-                    </div>    
-                </div>
-            </div>
+                </div>        
             </div>
 
-
-        <div id="shows">
-            <div class="shows_text">
-                <h1>Upcoming Shows</h1>
+            <div class="shows">
+                
             </div>
         </div>
-    </div>
     </section>
 
+
     <footer>
-        
+        <div class="container">
+
+        </div>
+
     </footer>
 </body>
 </html>
