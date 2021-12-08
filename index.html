@@ -18,6 +18,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+            var ws=$(this).scrollTop();
+
+            if(ws>1200){
+            $('.store .box').css("transform","translateY(0px)").css("opacity","1");
+          }
+
+        });
+    </script>
+
+
     <style>
 
             @font-face {
@@ -78,8 +93,11 @@
         #logo img{width:50px; height:50px; margin-left:10px; }
 
         nav{width:100%; height:50px;
-            font-family: 'Oswald', sans-serif; background-color:;}
-        ul,li,ol {float:left; margin:10px 28px; font-size:20px; font-family: 'Oswald', sans-serif;}
+            font-family: 'Oswald', sans-serif; 
+            margin-top: 10px;
+            background-color:
+        }
+        ul,li,ol {float:left; margin:10px 28px; font-size:18px; font-family: 'Oswald', sans-serif;}
 
         #sns {width:200px; height:50px; 
                 position:absolute;
@@ -87,12 +105,13 @@
                 z-index:3;
                 float:right;
                 background-color: ;}
-        #sns img{width:30px; height:auto; margin:10px;}
+        #sns img{width:30px; height:auto; margin:10px;
+            transition:all 0.5s ease;}
 
-        #sns img:hover{opacity: 0.5;]}
+        #sns img:hover{opacity: 0.5;}
 
 
-        #slider{width:100%; height:900px;  z-index:1; background-color:black;}
+        #slider{width:100%; height:1250px;  z-index:1; background-color:black;}
         #slider video{width:100%; height:auto;}
 
 
@@ -101,12 +120,13 @@
 
 
         section{width:100%; height:2700px; background-color: black;}
-        .title{width:300px; height:70px; margin-top:20px; background-color: y;}
+        .title{width:500px; height:70px; margin-top:20px; background-color: ;}
 
         .title h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; }
         .title h2{text-align: center; font-family: 'Oswald', sans-serif; color:white; }
         .product2 p{font-size: small;}
-        .new{width:1100px; height:650px; 
+        
+        .new{width:80%; height:900px; 
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -120,7 +140,7 @@
             align-content: center;
             background-color:; }
        
-        #new_box {width:600px; height:500px;
+        #new_box {width:700px; height:600px;
                     display: flex;
                     justify-content: center;
                     align-items:center;                        
@@ -128,24 +148,25 @@
                     background-color: ;}
 
                     
-        #new_box .box1{width:500px; height: 500px;  background-color: }
-        #new_box .box1 img{width:500px; height:auto;} 
+        #new_box .box1{width:650px; height: 550px;  background-color: }
+        #new_box .box1 img{width:600px; height:auto;} 
 
         #new_box .box2{width:500px; height:150px;
                             font-family: 'Outfit', sans-serif;
                             color:white;
                             background-color:;}
 
-        #new_box .box3{width:450px; height:100px;  justify-content: end;}
+        #new_box .box3{width:450px; height:100px;  
+            justify-content: end; background-color: ;}
 
-        .store{width:100%; height:1200px; 
+        .store{width:100%; height:1100px; 
              background-color:black; }
 
         #store_title{width:300px; height:180px; margin:0 auto; 
             display: flex; flex-wrap: wrap; 
             justify-content: center;
             align-content: center;
-            background-color:; }            
+            background-color: }            
         
 
         #store_box{width:100%; height:1000px; 
@@ -154,7 +175,7 @@
             justify-content: center;
             background-color:;}
         
-        .box_vinyl{width:68%; height:500px; 
+        .box_vinyl{width:75%; height:420px; 
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
@@ -163,21 +184,22 @@
 
                  
         
-        .box_clothing{width:68%; height:500px; 
+        .box_clothing{width:75%; height:420px; 
                     display: flex;
                     align-content: flex-start;
                     justify-content: space-evenly;
                     flex-direction: row;
-                    background-color: ;}    
+                    background-color:;}    
              
   
 
-        .store .box{width:600px; height:350px; 
+        .store .box{width:620px; height:350px; 
                     background-color: white;
                     display: flex;
                     flex-direction: column;
                     flex-wrap: wrap;
-                    justify-content: space-evenly;
+                    justify-content: space-around;
+                    transform: translateY(100px); transition: all 2s; opacity: 0;
                     }
 
         .product{width:300px; height:250px;
@@ -186,12 +208,16 @@
                     justify-content: space-evenly;
                     background-color:;}
 
-        .product img{width:300px; height:auto; }
+        .product img{width:300px; height:auto;
+                     transition:all 0.5s ease; 
+                    }
+        .product img:hover{opacity: 0.5;}            
 
         .product2{width:300px; height:250px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    font-family: 'Outfit', sans-serif;
                     background-color:;}
         
 
@@ -210,7 +236,62 @@
 
                   
 
-        .shows{width:100%; height:940px; background-color: mediumvioletred;}
+        .shows{width:100%; height:750px; background-color: black;}
+        #shows_title{width:700px; height:200px; margin:0 auto; 
+            display: flex; 
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-content:center;
+            background-color:;} 
+
+        .table_box{width:100%; height:400px; 
+                        display: flex;
+                        align-items:center;
+                        justify-content:space-between;}  
+
+        .table{width:950px; height:300px; margin:0 auto; 
+            border-bottom:1px solid #c3c3c3;
+            font-size:16px;
+            color:white;
+            background-color: ;
+        }
+      
+        table {font-family: 'Outfit', sans-serif;
+            display:inline-block;  
+            line-height:50px; width:100%; 
+            border-top:1px solid #c3c3c3;
+            ;
+            }
+        
+
+
+        .table h3{font-family: 'Outfit', sans-serif; font-size: small; }
+        .table table th {width:200px; border-bottom:1px solid #eee; color:white;}
+        .table table td:first-of-type {width:400px; color:#ee2851; border-bottom:1px solid #eee;}
+        .table table td:nth-of-type(2) {width:270px; text-align:center; border-bottom:1px solid #eee;}
+        .table table td:last-of-type {width:120px; text-align:center; border-bottom:1px solid #eee;}
+
+        .table .btn{font-size:small;
+                    background-color:#ee2851;
+                    transition:all 0.5s ease;}
+                    
+        .table .btn:hover{background-color:#6b1223;}          
+
+        .dates{width:950px; height:40px; 
+            background-color: #ee2851;
+            transition:all 0.5s ease;}
+        
+        .dates:hover{background-color:#6b1223;}
+
+        .dates {font-size: 15px;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            color:white;
+            padding-top: 10px;
+            }
+        
+
 
         footer{width:100%; height:400px; background-color: lightgrey;}
 
@@ -246,7 +327,7 @@
 
         <div id="slider">
             <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
-                <source src="img/glofo.mp4" type="video/mp4">
+                <source src="img/glofo2.mp4" type="video/mp4">
             </video> 
         </div>
     </div>
@@ -254,10 +335,7 @@
     <section>
         <div class="container">
             
-                <div id="new_title">
-                    <div class="title"><h1>New Album</h1></div>
-                    <div class="title"><h2>GLOW FOREVER - OUT NOW</h2></div>
-                </div>    
+                 
 
             <div class="new">
                 <div id="new_box">
@@ -265,6 +343,11 @@
                 </div>
                 
                 <div id="new_box">
+                    <div id="new_title">
+                        <div class="title"><h1>New Album</h1></div>
+                        <div class="title"><h2>GLOW FOREVER - OUT NOW</h2></div>
+                    </div>   
+
                     <div class="box2">
                         <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
                             It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
@@ -281,32 +364,32 @@
                 
                 <div id="store_box">
 
-                    <div class="box_vinyl">                    
+                    <div class="box_vinyl">  
+                        
                             <div class="box">
-                                <div class="product">
-                                    <img src="img/vinyl1.png" alt="vinyl1">
-                                </div>
-
-                                <div class="product2">
-                                    <p><b>VINYL</b></p>
-                                    <h4>glow forever - vinyl</h4>
-                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                                    <br>
-                                    
-                                    <div class="cart_box">
-                                        <h4>krw 41,500</h4>
-                                        <div class="cart">
-                                            <p>ADD TO CART</p>
-                                        </div>
-
-                                        <div class="heart">
-                                            <img src="img/heart.png">
-                                        </div>
+                                    <div class="product">
+                                        <img src="img/vinyl1.png" alt="vinyl1">
                                     </div>
-                                    
-                                </div>
-                            </div>
 
+                                    <div class="product2">
+                                        <p><b>VINYL</b></p>
+                                        <h4>glow forever - vinyl</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        
+                                        <div class="cart_box">
+                                            <h4>krw 41,500</h4>
+                                            <div class="cart">
+                                                <p>ADD TO CART</p>
+                                            </div>
+
+                                            <div class="heart">
+                                                <img src="img/heart.png">
+                                            </div>
+                                        </div>  
+                                    </div>                                   
+                            </div>
+                            
                             <div class="box">
                                 <div class="product">
                                     <img src="img/vinyl2.png" alt="vinyl2">
@@ -391,8 +474,56 @@
             </div>
 
             <div class="shows">
-                
+                <div id="shows_title">
+                    <div class="title"><h1>Upcoming Shows</h1></div>
+                    <div class="title"><h2>TOUR DATES</h2></div>
+                </div> 
+
+
+                    <div class="table_box">
+                        <div class="table">
+
+                            <h3>&#160;&#160;&#160;&#160;&#160;&#160;&#160;Upcoming Dates</h3><br>
+                                <table>
+
+                                    <tr>
+                                        <th>NOVEMBER 30TH</th>
+                                        <td>SAN FRANCISCO</td>
+                                        <td>Regency Grand Ballroom</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>		
+                                    </tr>
+                                    <tr>
+                                        <th>DECEMBER 2ND </th>
+                                        <td>LOS ANGELES</td>		
+                                        <td>The Belasco Theatre</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>DECEMBER 8TH</th>
+                                        <td>ATLANTA</td>		
+                                        <td>Center Stage</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>DECEMBER 10TH</th>
+                                        <td>NEW YORK</td>		
+                                        <td>Highline Ballroom</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+                                </table>
+
+                                <a href="#">
+                                    <div class="dates">
+                                        SHOW ALL DATES
+                                    </div>
+                                </a>
+                        </div>
+                    </div>    
             </div>
+
+            
         </div>
     </section>
 
