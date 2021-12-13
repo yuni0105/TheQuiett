@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TheQuiett</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +28,154 @@
             if(ws>1200){
             $('.store .box').css("transform","translateY(0px)").css("opacity","1");
           }
+        });
 
+        $(window).scroll(function(){
+            var ws=$(this).scrollTop();
+            if(ws>50){
+            $("#new_title").css("transform","translateY(0px)").css("opacity","1");
+          }
+        });
+
+
+        $(document).ready(function(){
+            $(".dates").click(function(){
+                $("#table_2").slideToggle(2000);
+            });
         });
     </script>
 
 
     <style>
+         @media screen and (max-width:599px) {
+                
+                    #slider{width:100%; max-height:300px; background-color: black;}
+                    section .container{width:100%; min-height:3500px; background-color:black; }
+
+
+                    header .container{width:100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                    }
+                    nav ul{display: flex;
+                        flex-direction: column;}
+                    nav ul li a{text-decoration: none; position:relative;}
+                   
+                    .menu{display:none;}
+                    .nav{display:block;}
+                    
+
+
+                    .new{width:100%; height: 200px; 
+                        display: flex;
+                        flex-direction: column;}
+
+                    #new_box{max-width:499px;}
+
+                    .box1{max-width:100%; max-height:350px; }
+
+                    .box2{max-width:350px; }
+
+                    .box3{margin-top: 20px;}
+
+                    #new_box .box1 img {max-width:500px;}
+
+                    .store{min-width:100%; min-height:1800px;
+                            margin-top:50px;
+                            background-color: red}
+
+                    #store_box{max-width: 100%;
+                        }
+                    
+
+                    .box_vinyl{min-width:100%;
+                                min-height:700px;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                        }      
+
+
+                    .box_clothing{min-width:100%;
+                                min-height:700px;
+                                margin-top: 40px;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                        }    
+
+                    #store_box .box{max-width: 100%;
+                        margin-top: 20px;
+                        }
+                    
+                    .product{max-width:200px;}
+                   
+
+                    .product img{
+                        max-width: 200px;}
+
+                    .cart_box{background-color: #ee2851;}    
+
+                    .product2{max-width: 100%; 
+                        }   
+
+
+                 
+                    .shows{width:100%; 
+                        }
+                    #shows_title{max-width:100%;  margin:0 auto; } 
+
+
+                    table{width:100%;}   
+
+                    .table_box{width:100%;  
+                        display: flex;
+                        
+                        }  
+
+                    .table{max-width:480px; 
+                        height:1000px; 
+                        margin:0 auto; 
+                        font-size:16px;
+                        color:white;
+                        
+                    }
+                
+                    table {font-family: 'Outfit', sans-serif;
+                        display:inline-block;  
+                        line-height:50px; 
+                        ;
+                        }
+                    
+                    .table table th {width:200px;}
+                    .table table td:first-of-type {width:400px; }
+                    .table table td:nth-of-type(2) {width:270px; }
+                    .table table td:last-of-type {width:120px; }
+
+
+                    
+                    .dates{max-width:480px; 
+                        height:40px; 
+                        }
+                    
+                    .dates:hover{background-color:#6b1223;}
+
+                   
+                    
+                    #table_2{display: none;}
+
+         }
+
+
+
+                  
+
+              
+
+
+
+
 
             @font-face {
             font-family: 'IBMPlexSansKR-Bold';
@@ -110,16 +252,20 @@
 
         #sns img:hover{opacity: 0.5;}
 
+    
 
-        #slider{width:100%; height:1250px;  z-index:1; background-color:black;}
-        #slider video{width:100%; height:auto;}
+        #slider{width:100%; height:1250px;  
+                    background-color:black;}
+
+        #slider video{width:100%; height:auto; z-index:2;}
 
 
 
 
 
 
-        section{width:100%; height:2700px; background-color: black;}
+
+        section{width:100%; height:2850px; background-color: black;}
         .title{width:500px; height:70px; margin-top:20px; background-color: ;}
 
         .title h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; }
@@ -131,25 +277,29 @@
             justify-content: space-evenly;
             align-items: center;
             margin:0 auto;
-            background-color:;
+            background-color:black;
             }
 
         #new_title{width:300px; height:180px; margin:0 auto; 
             display: flex; flex-wrap: wrap; 
             justify-content: center;
             align-content: center;
+            transform: translateY(100px); transition: all 2s; opacity: 0;
             background-color:; }
        
         #new_box {width:700px; height:600px;
                     display: flex;
                     justify-content: center;
                     align-items:center;                        
-                    flex-direction: column;   
+                    flex-direction: column;
                     background-color: ;}
+
+
+                        
 
                     
         #new_box .box1{width:650px; height: 550px;  background-color: }
-        #new_box .box1 img{width:600px; height:auto;} 
+        #new_box .box1 img{width:600px; height:auto;  } 
 
         #new_box .box2{width:500px; height:150px;
                             font-family: 'Outfit', sans-serif;
@@ -236,7 +386,7 @@
 
                   
 
-        .shows{width:100%; height:750px; background-color: black;}
+        .shows{width:100%; height:850px; }
         #shows_title{width:700px; height:200px; margin:0 auto; 
             display: flex; 
             flex-wrap: wrap;
@@ -251,7 +401,7 @@
                         justify-content:space-between;}  
 
         .table{width:950px; height:300px; margin:0 auto; 
-            border-bottom:1px solid #c3c3c3;
+            
             font-size:16px;
             color:white;
             background-color: ;
@@ -259,9 +409,7 @@
       
         table {font-family: 'Outfit', sans-serif;
             display:inline-block;  
-            line-height:50px; width:100%; 
-            border-top:1px solid #c3c3c3;
-            ;
+            line-height:50px; 
             }
         
 
@@ -291,9 +439,34 @@
             padding-top: 10px;
             }
         
+        #table_2{display: none;}
 
 
-        footer{width:100%; height:400px; background-color: lightgrey;}
+        footer{width:100%; height:160px; 
+            background-color: black;
+            }
+
+          
+        footer .container{display: flex;
+                            justify-content:flex-end;
+                            align-items: center;
+                            flex-direction: column;}  
+        
+        .sns2 {width:500px; height:60px; 
+                display:flex;
+                    justify-content: center;
+                    flex-direction: row;} 
+
+        footer .container p{width:500px; height:30px;
+                    margin:0 auto;
+                    color:white;
+                    font-family: 'Outfit', sans-serif;
+                    text-align: center;}
+
+        .sns2 img{width:20px; height:auto; margin:10px;
+                    transition:all 0.5s ease;}
+
+        .sns2 img:hover{opacity: 0.5;}
 
     </style>
 </head>
@@ -307,13 +480,15 @@
                 </div>
 
                 <nav>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ARTIST</a></li>
-                    <li><a href="#">PAGES</a></li>
-                    <li><a href="#">RELEASES</a></li>
-                    <li><a href="#">EVENTS</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">SHOP</a></li>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ARTIST</a></li>
+                        <li><a href="#">PAGES</a></li>
+                        <li><a href="#">RELEASES</a></li>
+                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                        <li><a href="#">SHOP</a></li>
+                    </ul>
                 </nav>
 
                 <div id="sns">
@@ -325,10 +500,15 @@
         </header>
 
 
+
+
         <div id="slider">
+
+          
+
             <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
                 <source src="img/glofo2.mp4" type="video/mp4">
-            </video> 
+            </video>
         </div>
     </div>
 
@@ -339,7 +519,9 @@
 
             <div class="new">
                 <div id="new_box">
-                    <div class="box1"><img src="img/vinyl.png" alt="vinyl"></div>
+                    <div class="box1">
+                        <img src="img/vinyl.png" alt="vinyl">
+                    </div>
                 </div>
                 
                 <div id="new_box">
@@ -401,7 +583,7 @@
                                     <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
                                     <br>
                                     <div class="cart_box">
-                                    <h4>krw 37,500</h4>
+                                        <h4>krw 37,500</h4>
                                     
                                         <div class="cart">
                                             <p>ADD TO CART</p>
@@ -445,31 +627,31 @@
                         </div>
                     
 
-                        <div class="box">
-                            <div class="product">
-                                <img src="img/sweat.png" alt="mtm">
-                            </div>
+                            <div class="box">
+                                <div class="product">
+                                    <img src="img/sweat.png" alt="mtm">
+                                </div>
 
-                            <div class="product2">
-                                <p><b>CLOTHING</b></p>
-                                <h4>glow forever - hoodie loyal blue</h4>
-                                <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                                <br>
-                                
-                                <div class="cart_box">
-                                    <h4>krw 55,000</h4>
-                                    <div class="cart">
-                                        <p>ADD TO CART</p>
-                                    </div>
+                                <div class="product2">
+                                    <p><b>CLOTHING</b></p>
+                                    <h4>glow forever - hoodie loyal blue</h4>
+                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                    <br>
+                                    
+                                    <div class="cart_box">
+                                        <h4>krw 55,000</h4>
+                                        <div class="cart">
+                                            <p>ADD TO CART</p>
+                                        </div>
 
-                                    <div class="heart">
-                                        <img src="img/heart.png">
+                                        <div class="heart">
+                                            <img src="img/heart.png">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
-                        </div>    
+                            </div>
+                           
                 </div>        
             </div>
 
@@ -484,6 +666,7 @@
                         <div class="table">
 
                             <h3>&#160;&#160;&#160;&#160;&#160;&#160;&#160;Upcoming Dates</h3><br>
+                                <hr>
                                 <table>
 
                                     <tr>
@@ -512,12 +695,44 @@
                                         <td>Highline Ballroom</td>
                                         <td><a href="#"><div class="btn">TICKETS</div></a></td>
                                     </tr>
+
+                                    <table id="table_2">
+
+                                        <tr>
+                                            <th>NOVEMBER 30TH</th>
+                                            <td>SAN FRANCISCO</td>
+                                            <td>Regency Grand Ballroom</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>		
+                                        </tr>
+                                        <tr>
+                                            <th>DECEMBER 2ND </th>
+                                            <td>LOS ANGELES</td>		
+                                            <td>The Belasco Theatre</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th>DECEMBER 8TH</th>
+                                            <td>ATLANTA</td>		
+                                            <td>Center Stage</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th>DECEMBER 10TH</th>
+                                            <td>NEW YORK</td>		
+                                            <td>Highline Ballroom</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+                                    </table>
                                 </table>
 
-                                <a href="#">
+                               
                                     <div class="dates">
                                         SHOW ALL DATES
                                     </div>
+
+                                    
                                 </a>
                         </div>
                     </div>    
@@ -530,7 +745,17 @@
 
     <footer>
         <div class="container">
-
+            <div class="sns2">
+                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="img/spotify.png" alt="spotify"></a>
+                <a href="#"><img src="img/apple.png" alt="apple"></a>
+                <a href="#"><img src="img/soundcloud.png" alt="soundcloud"></a>
+                
+            </div>
+            <p>Copyright 2021 Daytona Entertainment All Rights Reserved</p>
         </div>
 
     </footer>
