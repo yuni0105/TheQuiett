@@ -41,6 +41,7 @@
         $(document).ready(function(){
             $(".dates").click(function(){
                 $("#table_2").slideToggle(2000);
+
             });
         });
     </script>
@@ -50,6 +51,183 @@
          @media screen and (max-width:599px) {
                 
                     #slider{width:100%; max-height:300px; background-color: black;}
+                    section .container{width:100%; min-height:3500px; background-color:black; }
+                    section{width:100%; min-height:300px; background-color: chartreuse;}
+
+                    header .container{width:100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                    }
+                    nav ul{display: flex;
+                        flex-direction: column;}
+                    nav ul li a{text-decoration: none; position:relative;}
+                   
+                    .menu{display:none;}
+                    .nav{display:block;}
+                    
+
+
+                    .new{width:100%; height: 200px; 
+                        display: flex;
+                        flex-direction: column;}
+
+                    #new_box{max-width:499px;}
+
+                    .box1{max-width:100%; max-height:350px; }
+
+                    .box2{max-width:350px; }
+
+                    .box3{margin-top: 20px;}
+
+                    #new_box .box1 img {max-width:500px;}
+
+                    .store{min-width:100%; min-height:1750px;
+                            margin-top:50px;
+                            background-color: red}
+
+                    #store_box{max-width: 100%;
+                        
+                        }
+                    
+
+                    .box_vinyl{min-width:100%;
+                                min-height:700px;
+                            display: flex;
+                            flex-direction: column;
+                            
+                            
+                        }      
+
+
+                    .box_clothing{min-width:100%;
+                                min-height:700px;
+                                
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                        }    
+
+                    #store_box .box{max-width: 220px;
+                        min-height: 500px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        flex-direction: column;
+                       
+                        
+                        
+                        }
+                    
+                    .product{max-width:200px;
+                            margin-left: 25px;
+                            
+                            
+                            }
+                   
+
+                    .product img{
+                        max-width: 180px;
+                    }
+
+                    .cart_box{max-width: 180px;
+                                max-height: 40px;
+                                display: flex;
+                                align-content: space-between;
+                                
+                               
+                                
+                        }    
+                    
+                    .cart {max-width:60px;
+                        min-height:35px;
+                        font-size: 0.2em;
+                        
+                
+                    } 
+
+                    
+
+                    
+                
+                    
+
+                    .heart{text-align: center;}   
+                    
+
+                    .product2{max-width: 195px; 
+                        max-height:200px;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: smaller;
+                        
+                        
+                        }   
+
+
+                 
+                    .shows{width:100%; 
+                        min-height:1200px;
+                        background-color: black;
+                        
+                        }
+                    #shows_title{max-width:100%;  margin:0 auto; } 
+
+
+                    table{width:100%;}   
+
+                    .table_box{width:100%;  
+                        display: flex;
+                        
+                        }  
+
+                    .table{max-width:480px; 
+                        height:1000px; 
+                        margin:0 auto; 
+                        font-size:16px;
+                        color:white;
+                        
+                    }
+                
+                    table {font-family: 'Outfit', sans-serif;
+                        display:inline-block;  
+                        line-height:50px; 
+                        ;
+                        }
+                    
+                    .table table th {width:200px;}
+                    .table table td:first-of-type {width:400px; }
+                    .table table td:nth-of-type(2) {width:270px; }
+                    .table table td:last-of-type {width:120px; }
+
+
+                    
+                    .dates{max-width:480px; 
+                        height:40px; 
+                        }
+                    
+                    .dates:hover{background-color:#6b1223;}
+
+                   
+                    
+                    #table_2{display: none;}
+
+                    footer{max-width:100%; min-height:160px; 
+                            background-color: pink;
+                            display: flex;
+                            overflow: auto;
+                            }
+
+                        
+                       
+
+                        }
+
+
+         @media screen and (min-width:768px){
+               
+            #slider{width:100%; max-height:400px; background-color: pink;}
                     section .container{width:100%; min-height:3500px; background-color:black; }
 
 
@@ -83,7 +261,7 @@
 
                     .store{min-width:100%; min-height:1800px;
                             margin-top:50px;
-                            background-color: red}
+                            }
 
                     #store_box{max-width: 100%;
                         }
@@ -115,7 +293,11 @@
                     .product img{
                         max-width: 200px;}
 
-                    .cart_box{background-color: #ee2851;}    
+                    .cart{width:100px; height:30px; 
+                            background-color: #ee2851; border-radius: 30px; 
+                            font-size: small; color:white;
+                            text-align: center;
+                        }    
 
                     .product2{max-width: 100%; 
                         }   
@@ -165,11 +347,12 @@
                     
                     #table_2{display: none;}
 
+
          }
-
-
-
                   
+        
+
+
 
               
 
@@ -237,7 +420,7 @@
         nav{width:100%; height:50px;
             font-family: 'Oswald', sans-serif; 
             margin-top: 10px;
-            background-color:
+            
         }
         ul,li,ol {float:left; margin:10px 28px; font-size:18px; font-family: 'Oswald', sans-serif;}
 
@@ -368,7 +551,7 @@
                     flex-direction: column;
                     justify-content: center;
                     font-family: 'Outfit', sans-serif;
-                    background-color:;}
+                    }
         
 
         .cart_box{width:280px; height:40px;
@@ -376,10 +559,14 @@
                     align-items: center;
                     justify-content: space-between;
                     background-color: ;}
-        .cart{width:100px; height:30px; background-color: #ee2851; border-radius: 30px; 
-            font-size: small; color:white; 
+
+        .cart{width:100px; height:30px; 
+            background-color: #ee2851; border-radius: 30px; 
+             color:white;
             text-align: center;}
-        .cart p{margin-top: 5px;}                  
+
+        .cart p{margin-top: 5px;
+            font-size: 0.8em; color:white;}                  
 
         .heart{width:70px; height:30px; background-color:;}
         .heart img{width:30px; height:auto;}
@@ -544,23 +731,47 @@
                     <div class="title"><h2>SHOP NOW</h2></div>
                 </div> 
                 
-                <div id="store_box">
+                    <div id="store_box">
 
-                    <div class="box_vinyl">  
-                        
-                            <div class="box">
+                        <div class="box_vinyl">  
+                            
+                                <div class="box">
+                                        <div class="product">
+                                            <img src="img/vinyl1.png" alt="vinyl1">
+                                        </div>
+
+                                        <div class="product2">
+                                            <p><b>VINYL</b></p>
+                                            <h4>glow forever - vinyl</h4>
+                                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                            <br>
+                                            
+                                            <div class="cart_box">
+                                                <h4>krw 41,500</h4>
+                                                <div class="cart">
+                                                    <p>ADD TO CART</p>
+                                                </div>
+
+                                                <div class="heart">
+                                                    <img src="img/heart.png">
+                                                </div>
+                                            </div>  
+                                        </div>                                   
+                                </div>
+                                
+                                <div class="box">
                                     <div class="product">
-                                        <img src="img/vinyl1.png" alt="vinyl1">
+                                        <img src="img/vinyl2.png" alt="vinyl2">
                                     </div>
 
                                     <div class="product2">
                                         <p><b>VINYL</b></p>
-                                        <h4>glow forever - vinyl</h4>
+                                        <h4>glow forever - instrumentals vinyl</h4>
                                         <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
                                         <br>
-                                        
                                         <div class="cart_box">
-                                            <h4>krw 41,500</h4>
+                                            <h4>krw 37,500</h4>
+                                        
                                             <div class="cart">
                                                 <p>ADD TO CART</p>
                                             </div>
@@ -568,91 +779,68 @@
                                             <div class="heart">
                                                 <img src="img/heart.png">
                                             </div>
-                                        </div>  
-                                    </div>                                   
-                            </div>
-                            
-                            <div class="box">
-                                <div class="product">
-                                    <img src="img/vinyl2.png" alt="vinyl2">
-                                </div>
-
-                                <div class="product2">
-                                    <p><b>VINYL</b></p>
-                                    <h4>glow forever - instrumentals vinyl</h4>
-                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                                    <br>
-                                    <div class="cart_box">
-                                        <h4>krw 37,500</h4>
-                                    
-                                        <div class="cart">
-                                            <p>ADD TO CART</p>
-                                        </div>
-
-                                        <div class="heart">
-                                            <img src="img/heart.png">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                    </div>
-                    <div class="box_clothing">    
-                        <div class="box">
-
-                            
-                                <div class="product">
-                                    <img src="img/hood.png" alt="hoodie">                    
-                                </div>
-
-                                <div class="product2">
-                                    <p><b>CLOTHING</b></p>
-                                    <h4>glow forever - crew neck shirts</h4>
-                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                                    <br>
-                                    
-                                    <div class="cart_box">
-                                        <h4>krw 75,000</h4>
-                                        <div class="cart">
-                                            <p>ADD TO CART</p>
-                                        </div>
-
-                                        <div class="heart">
-                                            <img src="img/heart.png">
-                                        </div>
-                                    </div>                            
-                                </div>
-                            
 
                         </div>
-                    
-
+                        <div class="box_clothing">    
                             <div class="box">
-                                <div class="product">
-                                    <img src="img/sweat.png" alt="mtm">
-                                </div>
 
-                                <div class="product2">
-                                    <p><b>CLOTHING</b></p>
-                                    <h4>glow forever - hoodie loyal blue</h4>
-                                    <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
-                                    <br>
-                                    
-                                    <div class="cart_box">
-                                        <h4>krw 55,000</h4>
-                                        <div class="cart">
-                                            <p>ADD TO CART</p>
-                                        </div>
-
-                                        <div class="heart">
-                                            <img src="img/heart.png">
-                                        </div>
+                                
+                                    <div class="product">
+                                        <img src="img/hood.png" alt="hoodie">                    
                                     </div>
-                                </div>
+
+                                    <div class="product2">
+                                        <p><b>CLOTHING</b></p>
+                                        <h4>glow forever - crew neck shirts</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        
+                                        <div class="cart_box">
+                                            <h4>krw 75,000</h4>
+                                            <div class="cart">
+                                                <p>ADD TO CART</p>
+                                            </div>
+
+                                            <div class="heart">
+                                                <img src="img/heart.png">
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                
 
                             </div>
-                           
-                </div>        
+                        
+
+                                <div class="box">
+                                    <div class="product">
+                                        <img src="img/sweat.png" alt="mtm">
+                                    </div>
+
+                                    <div class="product2">
+                                        <p><b>CLOTHING</b></p>
+                                        <h4>glow forever - hoodie loyal blue</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        
+                                        <div class="cart_box">
+                                            <h4>krw 55,000</h4>
+                                            <div class="cart">
+                                                <p>ADD TO CART</p>
+                                            </div>
+
+                                            <div class="heart">
+                                                <img src="img/heart.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                        </div> 
+                    </div>           
             </div>
 
             <div class="shows">
@@ -757,7 +945,6 @@
             </div>
             <p>Copyright 2021 Daytona Entertainment All Rights Reserved</p>
         </div>
-
     </footer>
 </body>
 </html>
