@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheQuiett</title>
 
+    <link href="css/main.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
@@ -18,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
+    
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 
@@ -38,651 +41,83 @@
         });
 
 
-        $(document).ready(function(){
-            $(".dates").click(function(){
-                $("#table_2").slideToggle(2000);
+        
 
+
+        $(function(){
+            $('.dates').click(function(){
+                $("#table_2").slideToggle(2000);
+                if($(window).width() < 768){
+                    $("section").css({height:5500});
+                }
             });
         });
+
+        
+
+
+        $(function(){
+        $('.menu').click(function(){
+        $(".nav").toggleClass("wow");
+        if($(".nav").hasClass("wow")){
+        $(".nav").animate({"left":"0px"},500);
+        $(".menu").text("Close");
+        } else {
+        $(".nav").animate({"left":"-300px"},500);
+        $(".menu").text("Open");
+        }
+        });
+        });
+
+
+
     </script>
 
 
     <style>
-         @media screen and (max-width:599px) {
-                
-                    #slider{width:100%; max-height:300px; background-color: black;}
-                    section .container{width:100%; min-height:3500px; background-color:black; }
-                    section{width:100%; min-height:300px; background-color: chartreuse;}
-
-                    header .container{width:100%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: flex-start;
-                    }
-                    nav ul{display: flex;
-                        flex-direction: column;}
-                    nav ul li a{text-decoration: none; position:relative;}
-                   
-                    .menu{display:none;}
-                    .nav{display:block;}
-                    
-
-
-                    .new{width:100%; height: 200px; 
-                        display: flex;
-                        flex-direction: column;}
-
-                    #new_box{max-width:499px;}
-
-                    .box1{max-width:100%; max-height:350px; }
-
-                    .box2{max-width:350px; }
-
-                    .box3{margin-top: 20px;}
-
-                    #new_box .box1 img {max-width:500px;}
-
-                    .store{min-width:100%; min-height:1750px;
-                            margin-top:50px;
-                            background-color: red}
-
-                    #store_box{max-width: 100%;
-                        
-                        }
-                    
-
-                    .box_vinyl{min-width:100%;
-                                min-height:700px;
-                            display: flex;
-                            flex-direction: column;
-                            
-                            
-                        }      
-
-
-                    .box_clothing{min-width:100%;
-                                min-height:700px;
-                                
-                            display: flex;
-                            flex-direction: column;
-                            flex-wrap: wrap;
-                        }    
-
-                    #store_box .box{max-width: 220px;
-                        min-height: 500px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        align-content: center;
-                        flex-direction: column;
-                       
-                        
-                        
-                        }
-                    
-                    .product{max-width:200px;
-                            margin-left: 25px;
-                            
-                            
-                            }
-                   
-
-                    .product img{
-                        max-width: 180px;
-                    }
-
-                    .cart_box{max-width: 180px;
-                                max-height: 40px;
-                                display: flex;
-                                align-content: space-between;
-                                
-                               
-                                
-                        }    
-                    
-                    .cart {max-width:60px;
-                        min-height:35px;
-                        font-size: 0.2em;
-                        
-                
-                    } 
-
-                    
-
-                    
-                
-                    
-
-                    .heart{text-align: center;}   
-                    
-
-                    .product2{max-width: 195px; 
-                        max-height:200px;
-                        display: flex;
-                        flex-direction: column;
-                        font-size: smaller;
-                        
-                        
-                        }   
-
-
-                 
-                    .shows{width:100%; 
-                        min-height:1200px;
-                        background-color: black;
-                        
-                        }
-                    #shows_title{max-width:100%;  margin:0 auto; } 
-
-
-                    table{width:100%;}   
-
-                    .table_box{width:100%;  
-                        display: flex;
-                        
-                        }  
-
-                    .table{max-width:480px; 
-                        height:1000px; 
-                        margin:0 auto; 
-                        font-size:16px;
-                        color:white;
-                        
-                    }
-                
-                    table {font-family: 'Outfit', sans-serif;
-                        display:inline-block;  
-                        line-height:50px; 
-                        ;
-                        }
-                    
-                    .table table th {width:200px;}
-                    .table table td:first-of-type {width:400px; }
-                    .table table td:nth-of-type(2) {width:270px; }
-                    .table table td:last-of-type {width:120px; }
-
-
-                    
-                    .dates{max-width:480px; 
-                        height:40px; 
-                        }
-                    
-                    .dates:hover{background-color:#6b1223;}
-
-                   
-                    
-                    #table_2{display: none;}
-
-                    footer{max-width:100%; min-height:160px; 
-                            background-color: pink;
-                            display: flex;
-                            overflow: auto;
-                            }
-
-                        
-                       
-
-                        }
-
-
-         @media screen and (min-width:768px){
-               
-            #slider{width:100%; max-height:400px; background-color: pink;}
-                    section .container{width:100%; min-height:3500px; background-color:black; }
-
-
-                    header .container{width:100%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: flex-start;
-                    }
-                    nav ul{display: flex;
-                        flex-direction: column;}
-                    nav ul li a{text-decoration: none; position:relative;}
-                   
-                    .menu{display:none;}
-                    .nav{display:block;}
-                    
-
-
-                    .new{width:100%; height: 200px; 
-                        display: flex;
-                        flex-direction: column;}
-
-                    #new_box{max-width:499px;}
-
-                    .box1{max-width:100%; max-height:350px; }
-
-                    .box2{max-width:350px; }
-
-                    .box3{margin-top: 20px;}
-
-                    #new_box .box1 img {max-width:500px;}
-
-                    .store{min-width:100%; min-height:1800px;
-                            margin-top:50px;
-                            }
-
-                    #store_box{max-width: 100%;
-                        }
-                    
-
-                    .box_vinyl{min-width:100%;
-                                min-height:700px;
-                            display: flex;
-                            flex-direction: column;
-                            flex-wrap: wrap;
-                        }      
-
-
-                    .box_clothing{min-width:100%;
-                                min-height:700px;
-                                margin-top: 40px;
-                            display: flex;
-                            flex-direction: column;
-                            flex-wrap: wrap;
-                        }    
-
-                    #store_box .box{max-width: 100%;
-                        margin-top: 20px;
-                        }
-                    
-                    .product{max-width:200px;}
-                   
-
-                    .product img{
-                        max-width: 200px;}
-
-                    .cart{width:100px; height:30px; 
-                            background-color: #ee2851; border-radius: 30px; 
-                            font-size: small; color:white;
-                            text-align: center;
-                        }    
-
-                    .product2{max-width: 100%; 
-                        }   
-
-
-                 
-                    .shows{width:100%; 
-                        }
-                    #shows_title{max-width:100%;  margin:0 auto; } 
-
-
-                    table{width:100%;}   
-
-                    .table_box{width:100%;  
-                        display: flex;
-                        
-                        }  
-
-                    .table{max-width:480px; 
-                        height:1000px; 
-                        margin:0 auto; 
-                        font-size:16px;
-                        color:white;
-                        
-                    }
-                
-                    table {font-family: 'Outfit', sans-serif;
-                        display:inline-block;  
-                        line-height:50px; 
-                        ;
-                        }
-                    
-                    .table table th {width:200px;}
-                    .table table td:first-of-type {width:400px; }
-                    .table table td:nth-of-type(2) {width:270px; }
-                    .table table td:last-of-type {width:120px; }
-
-
-                    
-                    .dates{max-width:480px; 
-                        height:40px; 
-                        }
-                    
-                    .dates:hover{background-color:#6b1223;}
-
-                   
-                    
-                    #table_2{display: none;}
-
-
-         }
-                  
-        
-
-
-
-              
-
-
-
-
-
-            @font-face {
-            font-family: 'IBMPlexSansKR-Bold';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            }
-
-
-        *{margin:0; padding:0; box-sizing:border-box;}
-        ul,ol, li {list-style: none;}
-        a{text-decoration: none;
-        color:white;
-        }
-
-        a:hover{color:hotpink;}
-
-        li::before {
-        content: '';
-        width: 4%;
-        position: absolute;
-        top:50%;
-        height: 1px;
-        background: hotpink;
-        display: block;
-        -webkit-transform-origin: right top;
-        -ms-transform-origin: right top;
-        transform-origin: right top;
-        -webkit-transform: scale(0, 1);
-        -ms-transform: scale(0, 1);
-        transform: scale(0, 1);
-        -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
-        transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
-        }
-        
-        li:hover::before {
-        -webkit-transform-origin: left top;
-        -ms-transform-origin: left top;
-        transform-origin: left top;
-        -webkit-transform: scale(1, 1);
-        -ms-transform: scale(1, 1);
-        transform: scale(1, 1)
-        }
-
-        
-
-        .container{width:100%; height:100%; margin:0 auto; position: relative;}
-
-        #top{position:relative;}
-    
-        header{width:100%; height:100px; z-index:3; 
-            position:absolute; top:0; left:0;right:0; bottom:0; background-color: ;}
-
-
-        header .container{position:relative;}    
-        #logo{width:70px; height:70px; float:left; background-color: }
-        #logo img{width:50px; height:50px; margin-left:10px; }
-
-        nav{width:100%; height:50px;
-            font-family: 'Oswald', sans-serif; 
-            margin-top: 10px;
-            
-        }
-        ul,li,ol {float:left; margin:10px 28px; font-size:18px; font-family: 'Oswald', sans-serif;}
-
-        #sns {width:200px; height:50px; 
-                position:absolute;
-                top:0; right:0;
-                z-index:3;
-                float:right;
-                background-color: ;}
-        #sns img{width:30px; height:auto; margin:10px;
-            transition:all 0.5s ease;}
-
-        #sns img:hover{opacity: 0.5;}
-
-    
-
-        #slider{width:100%; height:1250px;  
-                    background-color:black;}
-
-        #slider video{width:100%; height:auto; z-index:2;}
-
-
-
-
-
-
-
-        section{width:100%; height:2850px; background-color: black;}
-        .title{width:500px; height:70px; margin-top:20px; background-color: ;}
-
-        .title h1{font-family: 'Mr Dafoe', cursive; color:white; text-align: center; font-size:60px; }
-        .title h2{text-align: center; font-family: 'Oswald', sans-serif; color:white; }
-        .product2 p{font-size: small;}
-        
-        .new{width:80%; height:900px; 
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin:0 auto;
-            background-color:black;
-            }
-
-        #new_title{width:300px; height:180px; margin:0 auto; 
-            display: flex; flex-wrap: wrap; 
-            justify-content: center;
-            align-content: center;
-            transform: translateY(100px); transition: all 2s; opacity: 0;
-            background-color:; }
-       
-        #new_box {width:700px; height:600px;
-                    display: flex;
-                    justify-content: center;
-                    align-items:center;                        
-                    flex-direction: column;
-                    background-color: ;}
-
-
-                        
-
-                    
-        #new_box .box1{width:650px; height: 550px;  background-color: }
-        #new_box .box1 img{width:600px; height:auto;  } 
-
-        #new_box .box2{width:500px; height:150px;
-                            font-family: 'Outfit', sans-serif;
-                            color:white;
-                            background-color:;}
-
-        #new_box .box3{width:450px; height:100px;  
-            justify-content: end; background-color: ;}
-
-        .store{width:100%; height:1100px; 
-             background-color:black; }
-
-        #store_title{width:300px; height:180px; margin:0 auto; 
-            display: flex; flex-wrap: wrap; 
-            justify-content: center;
-            align-content: center;
-            background-color: }            
-        
-
-        #store_box{width:100%; height:1000px; 
-            margin:0 auto;
-            display: flex; flex-wrap:wrap;
-            justify-content: center;
-            background-color:;}
-        
-        .box_vinyl{width:75%; height:420px; 
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    flex-direction: row;
-                    background-color: ;}
-
-                 
-        
-        .box_clothing{width:75%; height:420px; 
-                    display: flex;
-                    align-content: flex-start;
-                    justify-content: space-evenly;
-                    flex-direction: row;
-                    background-color:;}    
-             
-  
-
-        .store .box{width:620px; height:350px; 
-                    background-color: white;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    transform: translateY(100px); transition: all 2s; opacity: 0;
-                    }
-
-        .product{width:300px; height:250px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    background-color:;}
-
-        .product img{width:300px; height:auto;
-                     transition:all 0.5s ease; 
-                    }
-        .product img:hover{opacity: 0.5;}            
-
-        .product2{width:300px; height:250px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    font-family: 'Outfit', sans-serif;
-                    }
-        
-
-        .cart_box{width:280px; height:40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background-color: ;}
-
-        .cart{width:100px; height:30px; 
-            background-color: #ee2851; border-radius: 30px; 
-             color:white;
-            text-align: center;}
-
-        .cart p{margin-top: 5px;
-            font-size: 0.8em; color:white;}                  
-
-        .heart{width:70px; height:30px; background-color:;}
-        .heart img{width:30px; height:auto;}
-
-                  
-
-        .shows{width:100%; height:850px; }
-        #shows_title{width:700px; height:200px; margin:0 auto; 
-            display: flex; 
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content:space-evenly;
-            align-content:center;
-            background-color:;} 
-
-        .table_box{width:100%; height:400px; 
-                        display: flex;
-                        align-items:center;
-                        justify-content:space-between;}  
-
-        .table{width:950px; height:300px; margin:0 auto; 
-            
-            font-size:16px;
-            color:white;
-            background-color: ;
-        }
-      
-        table {font-family: 'Outfit', sans-serif;
-            display:inline-block;  
-            line-height:50px; 
-            }
-        
-
-
-        .table h3{font-family: 'Outfit', sans-serif; font-size: small; }
-        .table table th {width:200px; border-bottom:1px solid #eee; color:white;}
-        .table table td:first-of-type {width:400px; color:#ee2851; border-bottom:1px solid #eee;}
-        .table table td:nth-of-type(2) {width:270px; text-align:center; border-bottom:1px solid #eee;}
-        .table table td:last-of-type {width:120px; text-align:center; border-bottom:1px solid #eee;}
-
-        .table .btn{font-size:small;
-                    background-color:#ee2851;
-                    transition:all 0.5s ease;}
-                    
-        .table .btn:hover{background-color:#6b1223;}          
-
-        .dates{width:950px; height:40px; 
-            background-color: #ee2851;
-            transition:all 0.5s ease;}
-        
-        .dates:hover{background-color:#6b1223;}
-
-        .dates {font-size: 15px;
-            text-align: center;
-            font-family: 'Outfit', sans-serif;
-            color:white;
-            padding-top: 10px;
-            }
-        
-        #table_2{display: none;}
-
-
-        footer{width:100%; height:160px; 
-            background-color: black;
-            }
-
-          
-        footer .container{display: flex;
-                            justify-content:flex-end;
-                            align-items: center;
-                            flex-direction: column;}  
-        
-        .sns2 {width:500px; height:60px; 
-                display:flex;
-                    justify-content: center;
-                    flex-direction: row;} 
-
-        footer .container p{width:500px; height:30px;
-                    margin:0 auto;
-                    color:white;
-                    font-family: 'Outfit', sans-serif;
-                    text-align: center;}
-
-        .sns2 img{width:20px; height:auto; margin:10px;
-                    transition:all 0.5s ease;}
-
-        .sns2 img:hover{opacity: 0.5;}
-
+     
     </style>
 </head>
 
 <body>
+
+
     <div id="top">
         <header>
             <div class="container">
-                <div id="logo">
-                    <a href="#"><img src="img/logo2.png" alt="logo"></a>
-                </div>
+                
 
-                <nav>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ARTIST</a></li>
-                        <li><a href="#">PAGES</a></li>
-                        <li><a href="#">RELEASES</a></li>
-                        <li><a href="#">EVENTS</a></li>
-                        <li><a href="#">VIDEOS</a></li>
-                        <li><a href="#">SHOP</a></li>
-                    </ul>
-                </nav>
 
-                <div id="sns">
-                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
-                    <a href="#"><img src="img/insta.png" alt="instagram"></a>
-                    <a href="#"><img src="img/youtube.png" alt="youtube"></a>
-                </div>
+                
+
+                    <nav class="nav">
+
+                        <div id="logo">
+                            <a href="#"><img src="img/logo2.png" alt="logo"></a>
+                            
+                        </div>
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ARTIST</a></li>
+                            <li><a href="#">PAGES</a></li>
+                            <li><a href="#">RELEASES</a></li>
+                            <li><a href="#">EVENTS</a></li>
+                            <li><a href="#">VIDEOS</a></li>
+                            <li><a href="#">SHOP</a></li>
+                        </ul>
+                        <img src="img/menu.png" alt="menu" class="menu">
+
+                        <div id="sns">
+                            
+                                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                            
+                        </div>
+                    </nav>
+                    
+
+                
             </div>
         </header>
 
@@ -923,11 +358,15 @@
                                     
                                 </a>
                         </div>
-                    </div>    
+                    </div> 
+                    
+                
             </div>
 
             
         </div>
+
+       
     </section>
 
 
