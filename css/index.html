@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheQuiett</title>
+
+    <link href="css/min1200.css" rel="stylesheet">
+    <link href="css/min768.css" rel="stylesheet">
+    <link href="css/max767.css" rel="stylesheet">
+    <link href="css/min360.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+            var ws=$(this).scrollTop();
+
+            if(ws>1200){
+            $('.store .box').css("transform","translateY(0px)").css("opacity","1");
+          }
+        });
+
+        $(window).scroll(function(){
+            var ws=$(this).scrollTop();
+            if(ws>50){
+            $("#new_title").css("transform","translateY(0px)").css("opacity","1");
+          }
+        });
+
+
+        
+
+        $(function(){
+            $('.dates').click(function(){
+            $("#table_2").slideToggle(1000);
+            if($(window).width()<1199){
+		    $(".black").slideToggle(1000);
+        }
+        
+        });
+        });
+
+
+
+
+        $(function(){
+        $('.menu').click(function(){
+        $(".nav").toggleClass("wow");
+        if($(".nav").hasClass("wow")){
+        $(".nav").animate({"left":"0px"},500);
+        $(".menu").text("Close");
+        } else {
+        $(".nav").animate({"left":"-300px"},500);
+        $(".menu").text("Open");
+        }
+        });
+        });
+
+
+
+    </script>
+
+
+    <style>
+     
+    </style>
+</head>
+
+<body>
+
+
+    <div id="top">
+        <header>
+            <div class="container">
+                
+
+
+                
+
+                    <nav class="nav">
+
+                        <div id="logo">
+                            <a href="#"><img src="img/logo2.png" alt="logo"></a>
+                            
+                        </div>
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ARTIST</a></li>
+                            <li><a href="#">PAGES</a></li>
+                            <li><a href="#">RELEASES</a></li>
+                            <li><a href="#">EVENTS</a></li>
+                            <li><a href="#">VIDEOS</a></li>
+                            <li><a href="#">SHOP</a></li>
+                        </ul>
+                        <img src="img/menu.png" alt="menu" class="menu">
+
+                        <div id="sns">
+                            
+                                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                            
+                        </div>
+                    </nav>
+                    
+
+                
+            </div>
+        </header>
+
+
+
+
+        <div id="slider">
+
+          
+
+            <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video">
+                <source src="img/glofo2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            
+                 
+
+            <div class="new">
+                <div id="new_box">
+                    <div class="box1">
+                        <img src="img/vinyl.png" alt="vinyl">
+                    </div>
+                </div>
+                
+                <div id="new_box">
+                    <div id="new_title">
+                        <div class="title"><h1>New Album</h1></div>
+                        <div class="title"><h2>GLOW FOREVER - OUT NOW</h2></div>
+                    </div>   
+
+                    <div class="box2">
+                        <p>For the thirteen tracks on this LP, The Quiett mainly worked with Prima Vista but also involved up-and-coming young artists. This way, the album is a mix of The Quiett’s style and the current trends, a bit experimental here and there.
+                            It has 13 tracks featuring ZENE THE ZILLA, CHANGMO, Byun Un, and more.</p>
+                    </div>
+                    <div class="box3"><iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+                </div>
+            </div>
+
+            <div class="store">
+                <div id="store_title">
+                    <div class="title"><h1>The Store</h1></div>
+                    <div class="title"><h2>SHOP NOW</h2></div>
+                </div> 
+                
+                    <div id="store_box">
+
+                        <div class="box_vinyl">  
+                            
+                                <div class="box">
+                                        <div class="product">
+                                            <a href="#"><img src="img/vinyl1.png" alt="vinyl1"></a>
+                                        </div>
+
+                                        <div class="product2">
+                                            <p><b>VINYL</b></p>
+                                            <h4>glow forever - vinyl</h4>
+                                            <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                            <br>
+                                            
+                                            <div class="cart_box">
+                                                <h4>krw 41,500</h4>
+                                                <div class="cart">
+                                                    <a href="#"><p>ADD TO CART</p></a>
+                                                </div>
+
+                                                <div class="heart">
+                                                    <a href="#"><img src="img/heart.png"></a>
+                                                </div>
+                                            </div>  
+                                        </div>                                   
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="product">
+                                        <a href="#"><img src="img/vinyl2.png" alt="vinyl2"></a>
+                                    </div>
+
+                                    <div class="product2">
+                                        <p><b>VINYL</b></p>
+                                        <h4>glow forever - instrumentals vinyl</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        <div class="cart_box">
+                                            <h4>krw 37,500</h4>
+                                        
+                                            <div class="cart">
+                                                <a href="#"><p>ADD TO CART</p></a>
+                                            </div>
+
+                                            <div class="heart">
+                                                <a href="#"><img src="img/heart.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="box_clothing">    
+                            <div class="box">
+
+                                
+                                    <div class="product">
+                                        <a href="#"><img src="img/hood.png" alt="hoodie"></a>                    
+                                    </div>
+
+                                    <div class="product2">
+                                        <p><b>CLOTHING</b></p>
+                                        <h4>glow forever - crew neck shirts</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        
+                                        <div class="cart_box">
+                                            <h4>krw 75,000</h4>
+                                            <div class="cart">
+                                                <a href="#"><p>ADD TO CART</p></a>
+                                            </div>
+
+                                            <div class="heart">
+                                                <a href="#"><img src="img/heart.png"></a>
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                
+
+                            </div>
+                        
+
+                                <div class="box">
+                                    <div class="product">
+                                        <a href="#"><img src="img/sweat.png" alt="mtm"></a>
+                                    </div>
+
+                                    <div class="product2">
+                                        <p><b>CLOTHING</b></p>
+                                        <h4>glow forever - hoodie loyal blue</h4>
+                                        <p>12", Album, Limited Edition, 180g,33RPM,Gatefold Sleeve, Exclusive Bonus Track, Booklet with lyrics and liner notes (8pages)</p>
+                                        <br>
+                                        
+                                        <div class="cart_box">
+                                            <h4>krw 55,000</h4>
+                                            <div class="cart">
+                                                <a href="#"><p>ADD TO CART</p></a>
+                                            </div>
+
+                                            <div class="heart">
+                                                <a href="#"><img src="img/heart.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                        </div> 
+                    </div>           
+            </div>
+
+            <div class="shows">
+                <div id="shows_title">
+                    <div class="title"><h1>Upcoming Shows</h1></div>
+                    <div class="title"><h2>TOUR DATES</h2></div>
+                </div> 
+
+
+                    <div class="table_box">
+                        <div class="table">
+
+                            <h3>&#160;&#160;&#160;&#160;&#160;&#160;&#160;Upcoming Dates</h3><br>
+                                <hr>
+                                <table>
+
+                                    <tr>
+                                        <th>NOVEMBER 30TH</th>
+                                        <td>SAN FRANCISCO</td>
+                                        <td>Regency Grand Ballroom</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>		
+                                    </tr>
+                                    <tr>
+                                        <th>DECEMBER 2ND </th>
+                                        <td>LOS ANGELES</td>		
+                                        <td>The Belasco Theatre</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>DECEMBER 8TH</th>
+                                        <td>ATLANTA</td>		
+                                        <td>Center Stage</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>DECEMBER 10TH</th>
+                                        <td>NEW YORK</td>		
+                                        <td>Highline Ballroom</td>
+                                        <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                    </tr>
+
+                                    <table id="table_2">
+
+                                        <tr>
+                                            <th>NOVEMBER 30TH</th>
+                                            <td>SAN FRANCISCO</td>
+                                            <td>Regency Grand Ballroom</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>		
+                                        </tr>
+                                        <tr>
+                                            <th>DECEMBER 2ND </th>
+                                            <td>LOS ANGELES</td>		
+                                            <td>The Belasco Theatre</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th>DECEMBER 8TH</th>
+                                            <td>ATLANTA</td>		
+                                            <td>Center Stage</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th>DECEMBER 10TH</th>
+                                            <td>NEW YORK</td>		
+                                            <td>Highline Ballroom</td>
+                                            <td><a href="#"><div class="btn">TICKETS</div></a></td>
+                                        </tr>
+                                    </table>
+                                </table>
+
+                               
+                                    <div class="dates">
+                                        SHOW ALL DATES
+                                    </div>
+                                    
+                                </a>
+                        </div>
+                    </div> 
+
+                    
+                    
+                
+            </div>
+
+            
+           
+
+            
+        </div>
+
+        
+    </section>
+    
+    <div class="black">
+
+    </div>
+
+    <footer>
+
+        
+        <div class="container">
+            <div class="sns2">
+                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="img/spotify.png" alt="spotify"></a>
+                <a href="#"><img src="img/apple.png" alt="apple"></a>
+                <a href="#"><img src="img/soundcloud.png" alt="soundcloud"></a>
+                
+            </div>
+            <p>Copyright 2021 Daytona Entertainment All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
