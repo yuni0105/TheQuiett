@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiett</title>
+
+    <link href="css/sub.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <div id="top">
+        <header>
+            <div class="container">
+                
+
+
+                
+
+                    <nav class="nav">
+
+                        <div id="logo">
+                            <a href="#"><img src="img/logo2.png" alt="logo"></a>
+                            
+                        </div>
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ARTIST</a></li>
+                            <li><a href="#">PAGES</a></li>
+                            <li><a href="#">RELEASES</a></li>
+                            <li><a href="#">EVENTS</a></li>
+                            <li><a href="#">VIDEOS</a></li>
+                            <li><a href="#">SHOP</a></li>
+                        </ul>
+                        <img src="img/menu.png" alt="menu" class="menu">
+
+                        <div id="sns">
+                            
+                                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                            
+                        </div>
+                    </nav>
+                    
+
+                
+            </div>
+        </header>
+
+
+
+
+        <div id="slider">
+
+        </div>
+
+    </div>
+
+        <div id="artist">
+            <div class="container2">
+                <h1>THE QUIETT</h1>
+
+                    <div class="profile">
+                        <div class="profile2">
+                            <p><img src="img/profile.jpg" alt="thequiett1"></p>
+                            <p><img src="img/profile2.jpg" alt="thequiett2"></p>
+                            <p><img src="img/profile3.jpg" alt="thequiett3"></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id="artist2">
+            <div class="container2">
+                <div class="about">
+                    <h2>ABOUT ARTIST</h2>
+                    <p>The Quiett  is a South Korean rapper, composer, lyricist and record producer.<br> 
+                        He is widely known within the South Korean hip hop community for founding several major hip hop record labels,<br>
+                        including co-founding record labels Soul Company in 2004, Illionaire Records in 2011, and Ambition Musik in 2016,<br> 
+                        the latter two with fellow rapper Dok2.<br>
+                        He founded label Daytona Entertainment in 2020 and has remained since after Illionaire Records closed its doors.</p>
+                </div>
+
+                <div class="bginfo">
+                    <p>
+                        <b>Genres : </b>Hip hop<br>
+                        <b>Years active : </b>2003–present<br>
+                        <b>Occupations : </b>Rapper, composer, lyricist, record producer<br>
+                        <b>Labels : </b>Soul Company - Illionaire Records - Daytona
+
+                    </p>
+                </div>
+                <div class="qsns">
+                    <p>SHARE VIA:
+                    <a href="#"><img src="img/facebook2.png" alt="facebook"></a>
+                    <a href="#"><img src="img/twitter2.png" alt="twitter"></a>
+                    <a href="#"><img src="img/insta2.png" alt="instagram"></a>
+                </p>
+                </div>
+            </div>
+
+
+            
+        </div>
+
+        <div id="disco">
+            <div class="container2"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sns2">
+                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="img/spotify.png" alt="spotify"></a>
+                <a href="#"><img src="img/apple.png" alt="apple"></a>
+                <a href="#"><img src="img/soundcloud.png" alt="soundcloud"></a>
+                
+            </div>
+            <p>Copyright 2021 Daytona Entertainment All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+    <script>
+
+
+​       function slide(){
+                $('.profile2').stop().animation({marginLeft:-1080}, function(){
+                $('.profile2 p:first').appendTo('.profile2');
+                $('.profile2').css({marginLeft:0});
+        });
+        }
+
+
+        setInterval(slide,3000);
+
+​
+
+
+    </script>
+</body>
+</html>
