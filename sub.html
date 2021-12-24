@@ -33,6 +33,9 @@
 
 
     <script>
+
+
+
         $(document).ready(function(){
             $('.prev').click(function(){
                 $('.profile2 li:last').prependTo('.profile2');
@@ -51,104 +54,75 @@
         });
 
 
+        $(document).ready(function(){
+            $('.button').on('click',function(){
+                $('.modal-wrapper').toggleClass('open');
+                $('.cover').toggleClass('blur-it');
+                return false;
 
+            });
+
+        });
+
+        // album blur
 
         $(document).ready(function(){
-            $(window).scroll(function(){
-                if($(window).scrollTop()>1190){
-                    $('#dot').show('slow');
-                }else{
-                    $('#dot').hide('slow');
-
-                }
-
+            $("#albumcover").hover(function(){
+                $("#albumcover").toggleClass('blur-it');
+                $("#albumcover").toggleClass('cursor');
             });
-
         });
 
-
-
-        // fullpage
-
-        $(function(){
-            var dot = $("#dot ul li");
-            var contents = $("#fullpage>.page");
-
-            dot.click(function(e){
-                e.preventDefault();
-                var target = $(this);
-                var index = target.index();
-                var section = contents.eq(index);
-                var offset = section.offset().top;
-                $("#disco").animate({scrollTop:offset},600);
+        $(document).ready(function(){
+            $("#albumcover2").hover(function(){
+                $("#albumcover2").toggleClass('blur-it');
+                $("#albumcover2").toggleClass('cursor');
             });
-
-            $(window).scroll(function(){
-                var wScroll=$(this).scrollTop();
-
-                if(wScroll>=contents.eq(0).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(0).addClass("active");
-                    dot.eq(0).find("a").css({"background":"gold"});
-
-                }
-
-                if(wScroll>=contents.eq(1).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(1).addClass("active");
-                    dot.eq(1).find("a").css({"background":"gold"});
-
-                }
-
-                if(wScroll>=contents.eq(3).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(2).addClass("active");
-                    dot.eq(2).find("a").css({"background":"gold"});
-
-                }
-
-                if(wScroll>=contents.eq(3).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(3).addClass("active");
-                    dot.eq(3).find("a").css({"background":"gold"});
-
-                }
-
-                if(wScroll>=contents.eq(4).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(4).addClass("active");
-                    dot.eq(4).find("a").css({"background":"gold"});
-
-                }
-
-                if(wScroll>=contents.eq(5).offset().top){
-                    dot.css({"background":"red"});
-                    dot.find("a").css({"background":"orange"});
-                    dot.removeClass("active");
-                    dot.eq(5).addClass("active");
-                    dot.eq(5).find("a").css({"background":"gold"});
-
-                }
+        });
+        
+        $(document).ready(function(){
+            $("#albumcover3").hover(function(){
+                $("#albumcover3").toggleClass('blur-it');
+                $("#albumcover3").toggleClass('cursor');
             });
-       
         });
 
-        // js/side
-
-        $(function(){
-            $('')
-
+        $(document).ready(function(){
+            $("#albumcover4").hover(function(){
+                $("#albumcover4").toggleClass('blur-it');
+                $("#albumcover4").toggleClass('cursor');
+            });
         });
+
+        $(document).ready(function(){
+            $("#albumcover5").hover(function(){
+                $("#albumcover5").toggleClass('blur-it');
+                $("#albumcover5").toggleClass('cursor');
+            });
+        });
+
+        $(document).ready(function(){
+            $("#albumcover6").hover(function(){
+                $("#albumcover6").toggleClass('blur-it');
+                $("#albumcover6").toggleClass('cursor');
+            });
+        });
+
+        $(document).ready(function(){
+            $("#albumcover7").hover(function(){
+                $("#albumcover7").toggleClass('blur-it');
+                $("#albumcover7").toggleClass('cursor');
+            });
+        });
+
+        $(document).ready(function(){
+            $("#albumcover8").hover(function(){
+                $("#albumcover8").toggleClass('blur-it');
+                $("#albumcover8").toggleClass('cursor');
+            });
+        });
+
+        
 
     </script>
 
@@ -189,16 +163,24 @@
                         </div>
                     </nav>
                     
+                    <div class="artist">
+                        <p>ARTIST</p>
+                    </div>
 
                 
             </div>
         </header>
 
 
-
-
+        
         <div id="slider">
-
+            
+    
+            
+            
+            <video autoplay="" loop="" playsinline="" tabindex="-1" muted="" class="video" >
+                <source src="img/br2.mp4" type="video/mp4">
+            </video>
         </div>
 
     </div>
@@ -257,569 +239,178 @@
         </div>
 
         <div id="disco">
-
-            
-
-           
-
                     <div id="discog">
 
-                        <div id="dot">
+                        <div class="container3">
+                            <h1>DISCOGRAPHY</h1>
 
-                            <ul>
-                    
-                              <li><a href="#p0"></a></li>
-                    
-                              <li><a href="#p1"></a></li>
-                    
-                              <li><a href="#p2"></a></li>
-                    
-                              <li><a href="#p3"></a></li>
-                    
-                              <li><a href="#p4"></a></li>
-                    
-                              <li><a href="#p5"></a></li>
-                    
-                              <li><a href="#p6"></a></li>
-                    
-                            </ul>
-                    
-                          </div>
+                                <div class="canvas">
+                                    
+                                                    <div class="cover button">
+                                                            <figure class="effect">
+                                                                <img src="img/1.jpg" alt="cover" id="albumcover">
+                                                                <h3>Music (2005)</h3>
+                                                            </figure>
 
-                        
-                        <div id="fullpage"> 
-                                <!-- page 00 -->
 
-                                <div class="page p00 section" id="particles-js">
-                                    <h1>DISCOGRAPHY</h1>
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/1.jpg">
                                                     </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>The beat of The Quiett's debut album Music was made by The Quiett, which shows confidence and aspirations in music.<br> 
-                                                            It also tells various and creative stories through rap as a whole. <br>
-                                                            If you savor his lyrics, where warm discoveries about the world and harsh feelings coexist, <br>
-                                                            you will feel the frustration of life at some point.<br>
-                                                        </p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 28/07/2005<br>
-                                
-                                                            <b>Label :</b> Brownie Entertainment<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1.The Beginning (Intro)<br>
-                                                                    2.Introduction<br>
-                                                                    3.Declare<br>
-                                                                    4.커다란 실수 (Feat. Fana)<br>
-                                                                    5.섬<br>
-                                                                    6.상자 속 젊음 (Feat. Paloalto)<br>
-                                                                    7.위대한 순간<br>
-                                                                    8.Take the Q TRain<br>
-                                                                    9.즉흥곡 (Feat. Jerry.K)<br>
-                                                                    10.악몽<br>
-                                                                    11.Be Quiet (Feat. Kebee)<br>
-                                                                    12.Get Down<br>
-                                                                    13.소중한 만남<br>
-                                                                    14.더 나은 내일을 위한<br>
-                                                                    15.닿을 수 있다면 (Bonus Track)<br>
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
 
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/2.jpg" alt="cover" id="albumcover2">
+                                                            <h3>Q Train (2006)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/3.jpg" alt="cover" id="albumcover3">
+                                                            <h3>The Real Me (2007)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/4.jpg" alt="cover" id="albumcover4">
+                                                            <h3>Quiet Storm: 
+                                                                A Night Record (2010)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/5.jpg" alt="cover" id="albumcover5">
+                                                            <h3>1 Life 2 Live (2015)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/6.jpg" alt="cover" id="albumcover6">
+                                                            <h3>Q Train 2 (2016)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/7.jpg" alt="cover" id="albumcover7">
+                                                            <h3>Millionaire Poetry (2017)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                    <div class="cover button">
+                                                        <figure class="effect">
+                                                            <img src="img/8.jpg" alt="cover" id="albumcover8">
+                                                            <h3>Glow Forever (2018)</h3>
+                                                        </figure>
+                                                    </div>
+
+                                                
+                                                    <!-- modal -->
+
+                                                    <!-- 01 -->
+                                                    <div class="modal-wrapper">
+                                                        <div class="modal">
+                                                            <div class="modalhead">
+                                                                <a class="close button" href="#">
+                                                                    <img src="img/close.png" alt="close">
+                                                                </a>
+                                                            </div>    
+                                                                <div class="albums1">
+                                                                    <div class="album">
+                                                                        
+                                                                        <div class="track">
+                                                                            <h2>TRACKLIST</h2>
+                                                                            <p>
+                                                                                1.The Beginning (Intro)<br>
+                                                                                2.Introduction<br>
+                                                                                3.Declare<br>
+                                                                                4.커다란 실수 (Feat. Fana)<br>
+                                                                                5.섬<br>
+                                                                                6.상자 속 젊음 (Feat. Paloalto)<br>
+                                                                                7.위대한 순간<br>
+                                                                                8.Take the Q TRain<br>
+                                                                                9.즉흥곡 (Feat. Jerry.K)<br>
+                                                                                10.악몽<br>
+                                                                                11.Be Quiet (Feat. Kebee)<br>
+                                                                                12.Get Down<br>
+                                                                                13.소중한 만남<br>
+                                                                                14.더 나은 내일을 위한<br>
+                                                                                15.닿을 수 있다면 (Bonus Track)<br>
+                                                                            </p>
+                                                                        </div>
+                                            
+                                                                        <div class="track2">
+                                                                            <h2>-</h2>
+                                                                            <p>
+                                                                                0:45&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br> 
+                                                                                3:15&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:10&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                3:10&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                3:29&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:54&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                3:59&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:23&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                2:43&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:27&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                3:24&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                3:54&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                5:43&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:27&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+                                                                                4:58&nbsp;&nbsp;&nbsp;<img src="img/play.png" alt="playicon"><br>
+            
+                                                                            </p>
+                                                                        </div>
+                                            
+                                                                   
+                                                                    </div>
+
+                                                                    <div class="album2">
+                                                                        <h2>ABOUT ALBUM</h2>
+
+                                                                        <p>The beat of The Quiett's debut album Music was made by The Quiett, which shows confidence and aspirations in music.<br> 
+                                                                            It also tells various and creative stories through rap as a whole. <br>
+                                                                            If you savor his lyrics, where warm discoveries about the world and harsh feelings coexist, <br>
+                                                                            you will feel the frustration of life at some point.<br>
+                                                                            <br>
+                                                                            <br>
+                                                                            <br>
+                                                                            
+                                                                    
+                                                
+                                                                            <b>Label :</b> Brownie Entertainment<br>
+
+                                                                            <b>Duration :</b> 62:39<br>
+                                                
+                                                                            <b>Produced :</b> The Quiett<br>
+
+                                                                            <b>Release Date :</b> 28/07/2005<br>
+                                                                        </p>
+
+
+                                                                        <div class="player">
+                                                                            <iframe src="https://open.spotify.com/embed/artist/2qI1pO64eYqGUiv1XTw4cy?utm_source=generator&theme=0" width="100%" height="230" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>         
+                                                                        </div>
+                                                                    </div>
+
+                                                                    
+                                                                </div>
+                                                                 
+                                                        </div>       
+                                                    </div>
+
+
+
+                                                
+
+                                                
+                                       
+                                 
                                 </div>
-
-                                <!-- 01 PF-->
-
-                                <article class="page p05 section" id="p1">
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/2.jpg">
-                                                    </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>The Quiett's second album [Q Train] is mostly instrumental music without vocals.<br>
-                                                             Therefore, listeners can focus on the sound delivered by the producer,<br>
-                                                              and they feel different fun and emotion from rap music.
-                                                        </p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 07/02/2006<br>
-                                
-                                                            <b>Label :</b> Brownie Entertainment<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1. Go<br>
-                                                                    2. The Streets (Feat. DJ Silent)<br>
-                                                                    3. 그 남자 그 여자 (Feat. Cubic)<br>
-                                                                    4. 대면<br>
-                                                                    5. Dolphin Dance<br>
-                                                                    6. Interlude (Feat. Mad Clown)<br>
-                                                                    7. Martial Beat Arts (Feat. DJ Silent)<br>
-                                                                    8. 뭐 (Feat. Notorious Kid, Friz & Pumkin Of Unknowndjs)<br>
-                                                                    9. Music<br>
-                                                                    10. Take The Q Train Remix (Feat. P-Type)<br>
-                                                                    11. City Cats<br>
-                                                                    12. 뒤척임 (Feat. Lee Byong-ho)<br>
-                                                                    13. Sunshine Luv<br>
-                                                                    14. 다음에 만나요<br>
-                                                                    
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/album/1Q2x9xDLgELzf08FiUwGoX?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>    
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </article>
-
-                                <!-- 02 PF-->
-
-                                <article class="page p04 section" id="p2">
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/3.jpg">
-                                                    </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>
-                                                            The title of the album, "The Real Me," is said to <br>
-                                                            have been decided among the numerous titles that came to mind after long consideration.<br>
-                                                            Then, what does it mean? The Quiett says about the title "The Real Me."<br>
-                                                            "This album contains stories about that individual, <br>
-                                                            or about young people living in this era. <br>
-                                                            In the end, the motif of this album is to express the moment when I and we meet our true selves."
-                                                        </p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 13/12/2007<br>
-                                
-                                                            <b>Label :</b> Soul Company<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1. More Introduction<br>
-                                                                    2. The Listening<br>
-                                                                    3. Punchlines<br>
-                                                                    4. 뛰어가 (feat. Tiger JK, Jinbo)<br>
-                                                                    5. 한번뿐인 인생<br>
-                                                                    6. 매일 밤 03<br>
-                                                                    7. Keep Right (feat. Loptimist)<br>
-                                                                    8. Give It To H.E.R. (feat. Leo Kekoa, Dok2, Simon Dominic)<br>
-                                                                    9. Shine Your Light (feat. Verbal Jint)<br>
-                                                                    10. 꽉 잡아 (feat. Jinbo)<br>
-                                                                    11. 진흙 속에서 피는 꽃 (feat. MC Meta, Kebee)<br>
-                                                                    12. 절대로 잊지 않아<br>
-                                                                    13. Love People, Love Music (feat. T)<br>
-                                                                    
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/album/6c3CcKgq0T5fVTJ9EjfIlE?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </article>
-
-                                <!-- 03 PF-->
-
-                                <article class="page p01 section" id="p3">
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/5.jpg">
-                                                    </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>
-                                                            Unlike previous The Quiett albums, which had been produced alone,<br> 
-                                                            many hip-hop producers from overseas participated in this album.<br>
-                                                            Overseas producers who participated in the album are Jake One, Kev Brown, Zo!<br>
-                                                            in the United States, Slakah The Beatild in Canada, and DJ Mitsu The Beats in Japan.
-                                                        </p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 11/03/2010<br>
-                                
-                                                            <b>Label :</b> Soul Company<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1. Welcome To The Show<br>
-                                                                    2. Never Q.U.I.T.T.<br>
-                                                                    3. Be My Luv<br>
-                                                                    4. Stars (Feat. Verbal Jint & Swings)<br>
-                                                                    5. Lonely One<br>
-                                                                    6. Q's Way (Feat. Venus)<br>
-                                                                    7. Game Theory<br>
-                                                                    8. Airplane Music (Feat. Basick, Rimi, Beenzino, Fana & San E)<br>
-                                                                    9. 시간이 왔나봐 (Feat. Dead'P)<br>
-                                                                    10. Old Records<br>
-                                                                    11. Love/Hate (Feat. Jinbo)<br>
-                                                                    12. Shine 'Em<br>
-                                                                    13. Be My Luv Remix (Feat. B-Free, 'NUCK'넋업샨, Paloalto & Junggigo)<br>
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/album/1bXZBTOy2tyG39DlbgObwC?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </article>
-
-                                <!-- 04 PF-->
-
-                                <article class="page p02 section" id="p4">
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/9.jpg">
-                                                    </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>
-                                                            The Quiett, which has led the hip-hop scene for the past decade since its debut,<br>
-                                                             will release a new full-length album [1 Life 2 Live].<br> 
-                                                             [1 Life 2 Live] is his first full-length album in five years<br>
-                                                             and shows his music world, which has reached a new stage.
-                                                        </p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 15/10/2015<br>
-                                
-                                                            <b>Label :</b> Illionaire Records<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1. Bentley<br>
-                                                                    2. All About<br>
-                                                                    3. 1 Life 2 Live<br>
-                                                                    4. World Famous (Feat. Dok2, Jinbo)<br>
-                                                                    5. Your World<br>
-                                                                    6. 할렐루야 (Feat. Beenzino)<br>
-                                                                    7. 과연 누가<br>
-                                                                    8. Body 2 Body<br>
-                                                                    9. Montana<br>
-                                                                    10. My Life (Feat. Dok2, Beenzino)<br>
-                                                                    11. Lifetime<br>
-                                                                    12. Be About It (Feat. Babylon)<br>
-                                                                    13. Illionaire Way 2<br>
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/album/6r9mSEE0PzpUPlHITEXddP?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>    
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </article>
-
-                                <!-- 05 PF-->
-
-                                <article class="page p03 section" id="p5">
-
-                                    <div id="modaltest">
-                                        <div class="container2">
-
-                                                <div class="one">
-                                                    <div class="cover">
-                                                        <img src="img/10.jpg">
-                                                    </div>
-                                                    <div class="box">
-                                                        <h2>ABOUT ALBUM</h2>
-                                                        <p>"Q Train 2" is a sequel to "Q Train" that he released in 2006.<br>
-                                                            You can enjoy various styles of hip-hop music he produced.</p>
-                                                        <br><br>
-                                                        <p>
-                                                            <b>Release Date :</b> 29/04/2016<br>
-                                
-                                                            <b>Label :</b> Illionaire Records<br>
-                                
-                                                            <b>Produced :</b> The Quiett<br>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                
-                                                <div class="two">
-                                                    <div class="box2">
-                                                        
-                                                            <div class="track">
-                                                                <h2>TRACKLIST</h2>
-                                                                <p>
-                                                                    1. Slam Dunk<br>
-                                                                    2. Beat King<br>
-                                                                    3. Soul City<br>
-                                                                    4. Dope (Feat. Okasian, JustThis)<br>
-                                                                    5. Paper Chasers (Feat. DJ Wegun)<br>
-                                                                    6. Ride to Atlantis<br>
-                                                                    7. Martial Beat Arts 2<br>
-                                                                    8. Cool<br>
-                                                                    9. I just (Feat. Notorious Kid)<br>
-                                                                    10. Very Special<br>
-                                                                    11. Love Letter<br>
-                                                                    12. Life of the Party<br>
-                                                                    13. Last Train<br>
-                                                                    14. Champion<br>                                                               
-                                                                </p>
-                                                            </div>
-                                
-                                                            <div class="track2">
-                                                                <p>
-                                                                    0:45<img src="img/play.png" alt="playicon"><br> 
-                                                                    3:15<img src="img/play.png" alt="playicon"><br>
-                                                                    4:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:10<img src="img/play.png" alt="playicon"><br>
-                                                                    3:29<img src="img/play.png" alt="playicon"><br>
-                                                                    4:54<img src="img/play.png" alt="playicon"><br>
-                                                                    3:59<img src="img/play.png" alt="playicon"><br>
-                                                                    4:23<img src="img/play.png" alt="playicon"><br>
-                                                                    2:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    3:24<img src="img/play.png" alt="playicon"><br>
-                                                                    3:54<img src="img/play.png" alt="playicon"><br>
-                                                                    5:43<img src="img/play.png" alt="playicon"><br>
-                                                                    4:27<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                    4:58<img src="img/play.png" alt="playicon"><br>
-                                                                </p>
-                                                            </div>
-                                                    </div>
-                                
-                                                    <div class="box">
-                                                        <iframe src="https://open.spotify.com/embed/album/6WJWq30rqwKyNZhPAP0K2p?utm_source=generator&theme=0" width="100%" height="270" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </article>
-
-                                <!--마지막 페이지 모음-->
-
-                                <div class="pf_bot page section" id="p6">
-
-                                </div><!--//pf_bot-->
-
                         </div>
-
-
-
-                        
-
-                        <div class="line"></div>
-
-
-                        
-
- 
-
-                        
                     </div>
-           
 
         </div>
-
-
 
         <div id="video">
             <h2>LATEST VIDEO:</h2>
@@ -829,9 +420,6 @@
             </div>
             
         </div>
-
-
-
 
 
 
@@ -852,6 +440,8 @@
             <p>Copyright 2021 Daytona Entertainment All Rights Reserved</p>
         </div>
     </footer>
+
+
 
 
 
