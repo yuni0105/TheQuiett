@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quiett</title>
 
-    <link href="css/subsubsub.css" rel="stylesheet">
+    <link href="css/submin1200.css" rel="stylesheet">
+    <link href="css/submin768.css" rel="stylesheet">
+    <link href="css/submax767.css" rel="stylesheet">
+    <link href="css/submin1200.css" rel="stylesheet">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +38,7 @@
     <script>
 
 
-
+        // profile img
         $(document).ready(function(){
             $('.prev').click(function(){
                 $('.profile2 li:last').prependTo('.profile2');
@@ -53,17 +56,54 @@
             });
         });
 
+        // 
+
+
+
+
+        $(document).ready(function(){
+            $('.prev').click(function(){
+                if($(window).width()<767){
+                $('.profile2 li:last').prependTo('.profile2');   
+                    $('.profile2').css('margin-left',-450);
+                    $('profile2').stop().animate({marginLeft:0},800)
+                }
+            });
+
+                $('.next').click(function(){
+                    if($(window).width()<767){
+                        $('.profile2').stop().animate({marginLeft:-450},800,function(){
+                            $('.profile2 li:first').appendTo('.profile2');
+                            $('.profile2').css({marginLeft:0});
+
+                        });
+                    }
+
+                });
+        });
+
+
+
+        
+        // modal
 
         $(document).ready(function(){
             $('.button').on('click',function(){
                 $('.modal-wrapper').toggleClass('open');
                 $('.cover').toggleClass('blur-it');
                 return false;
-
             });
-
         });
 
+
+        $(document).ready(function(){
+            $('.button2').on('click',function(){
+                $('.modal-wrapper2').toggleClass('open');
+                $('.cover').toggleClass('blur-it');
+                return false;
+            });
+        });
+        
         // album blur
 
         $(document).ready(function(){
@@ -122,6 +162,21 @@
             });
         });
 
+        // menu
+
+        $(function(){
+        $('.menu').click(function(){
+        $(".nav").toggleClass("wow");
+        if($(".nav").hasClass("wow")){
+        $(".nav").animate({"left":"0px"},500);
+        $(".menu").text("Close");
+        } else {
+        $(".nav").animate({"left":"-300px"},500);
+        $(".menu").text("Open");
+        }
+        });
+        });
+
         
 
     </script>
@@ -142,7 +197,7 @@
                             
                         </div>
                         
-                            <ul class="nav">
+                            <ul class="navv">
                                 <li><a href="index.html">HOME</a></li>
                                 <li><a href="#">ARTIST</a></li>
                                 <li><a href="#">PAGES</a></li>
