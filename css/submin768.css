@@ -122,14 +122,14 @@ ul {margin:10px 0 10px 0px;}
     font-size:60px;
     color:white;}
 
-.profile{width:90%; height:750px; margin:50px;
+.profile{width:90%; height:675px; margin:50px;
     position:relative;  overflow: hidden;
     }
 
 
-.profile2{width:3240px;}
-.profile2>li{width:1080px; height:750px; float:left;}
-.profile2>li>img {width:100%; height:100%; }   
+.profile2{width:2916px; position:absolute; left:-10%;}
+.profile2>li{width:972px; height:675px; float:left;}
+.profile2>li>img {width:100%; height:100%;  }   
 
 .prev{width:30px; height:30px; position: absolute; top:50%; left:0;}
 .next{width:30px; height:30px; position: absolute; top:50%; right:0;}
@@ -139,14 +139,15 @@ ul {margin:10px 0 10px 0px;}
     
     }
 
-    #artist2 .container2 {width: 100%; height: 100%;
+    #artist2 .container2 {width: 90%; height: 100%;
         display:flex; 
         justify-content: space-around;
         position:relative;
         
+        
         } 
         
-.about{min-width:600px; height:300px; 
+.about{min-width:70%; height:300px; 
     position: relative; 
     }   
 
@@ -158,7 +159,7 @@ ul {margin:10px 0 10px 0px;}
     color:white;}    
 
 
-.bginfo{width:220px; height:300px; float:right; 
+.bginfo{width:30%; height:300px; float:right; 
     font-size: small;
     font-family: 'Outfit', sans-serif;
     
@@ -170,7 +171,7 @@ ul {margin:10px 0 10px 0px;}
 
 
 
-.qsns{width:920px; height:30px; position: absolute;
+.qsns{width:85%; height:30px; position: absolute;
      top:250px; text-align:left;
      
      
@@ -414,7 +415,7 @@ ul {margin:10px 0 10px 0px;}
 /* footer */
 
 
-footer{width:100%; height:160px; 
+footer{width:100%; 
     background-color: black;
     }
 
