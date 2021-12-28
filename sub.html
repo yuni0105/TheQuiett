@@ -39,67 +39,43 @@
 
 
         // profile img
-        $(document).ready(function(){
-            $('.prev').click(function(){
-                $('.profile2 li:last').prependTo('.profile2');
-                $('.profile2').css('margin-left',-972);
-                $('.profile2').stop().animate({marginLeft:0},800);
-            });
+        $(document).ready(function () {
 
-            $('.next').click(function(){
-                $('.profile2').stop().animate({marginLeft:-972},800,function(){
-                    $('.profile2 li:first').appendTo('.profile2');
-                    $('.profile2').css({marginLeft:0});
+            if ($(window).width() > 1199) {
+                $('.prev').click(function () {
+                    $('.profile2 li:last').prependTo('.profile2');
+                    $('.profile2').css('margin-left', -1080);
+                    $('.profile2').stop().animate({ marginLeft: 0 }, 800);
+                });
+
+                $('.next').click(function () {
+                    $('.profile2').stop().animate({ marginLeft: -1080 }, 800, function () {
+                        $('.profile2 li:first').appendTo('.profile2');
+                        $('.profile2').css({ marginLeft: 0 });
+                    });
+                });
+
+            } else {
+                let w=window.innerWidth;
+
+                $('.prev').click(function () {
+                    $('.profile2 li:last').prependTo('.profile2');
+                    $('.profile2').css('margin-left', -w);
+                    $('.profile2').stop().animate({ marginLeft: 0 }, 800);
+                });
+
+                $('.next').click(function () {
+                    $('.profile2').stop().animate({ marginLeft: -w }, 800, function () {
+                        $('.profile2 li:first').appendTo('.profile2');
+                        $('.profile2').css({ marginLeft: 0 });
+
+                    });
 
                 });
 
-            });
-        });
-
-        // 
-        $(document).ready(function(){
-            $('.prev').click(function(){
-                if($(window).width()>1199){
-                    $('.profile2 li:last').prependTo('.profile2');   
-                    $('.profile2').css('margin-left',-1080);
-                    $('.profile2').stop().animate({marginLeft:0},800);
-                }
-            });
-
-                $('.next').click(function(){
-                    if($(window).width()>1199){
-                        $('.profile2').stop().animate({marginLeft:-1080},800,function(){
-                            $('.profile2 li:first').appendTo('.profile2');
-                            $('.profile2').css({marginLeft:0});
-
-                        });
-                    }
-
-                });
-        });
-
-        // 
+            }
 
 
-        $(document).ready(function(){
-            $('.prev').click(function(){
-                if($(window).width()<767){
-                    $('.profile2 li:last').prependTo('.profile2');   
-                    $('.profile2').css('margin-left',-450);
-                    $('.profile2').stop().animate({marginLeft:0},800);
-                }
-            });
-
-                $('.next').click(function(){
-                    if($(window).width()<767){
-                        $('.profile2').stop().animate({marginLeft:-450},800,function(){
-                            $('.profile2 li:first').appendTo('.profile2');
-                            $('.profile2').css({marginLeft:0});
-
-                        });
-                    }
-
-                });
         });
 
 

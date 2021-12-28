@@ -108,7 +108,7 @@ ul {margin:10px 0 10px 0px;}
 .container2 {max-width: 100%; height: 100%; margin: 0 auto; 
             position:relative; }
 
-#artist .container2 {width: 1600px; height: 100%;
+#artist .container2 {width: 100%; height: 100%;
                     display:flex;
                      flex-direction: column;  
                      justify-content: flex-end; 
@@ -122,13 +122,13 @@ ul {margin:10px 0 10px 0px;}
     font-size:60px;
     color:white;}
 
-.profile{width:90%; height:675px; margin:50px;
+.profile{width:100vw; height:675px; margin:50px;
     position:relative;  overflow: hidden;
     }
 
 
-.profile2{width:2916px; position:absolute; left:-10%;}
-.profile2>li{width:972px; height:675px; float:left;}
+.profile2{width:300vw; position:absolute;}
+.profile2>li{width:100vw; height:675px; float:left;}
 .profile2>li>img {width:100%; height:100%;  }   
 
 .prev{width:30px; height:30px; position: absolute; top:50%; left:0;}

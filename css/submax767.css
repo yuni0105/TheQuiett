@@ -126,13 +126,13 @@ header .container{position:relative;}
     font-size:40px;
     color:white;}
 
-.profile{width:90%; height:300px; margin:50px;
+.profile{width:100vw; height:300px; margin:50px;
     position:relative;  overflow: hidden;
     }
 
 
-.profile2{width:1350px; position:absolute;}
-.profile2>li{width:450px; height:320px; float:left;}
+.profile2{width:300vw; position:absolute;}
+.profile2>li{width:100vw; height:320px; float:left;}
 .profile2>li>img {width:100%; height:100%;}   
 
 .prev{width:30px; height:30px; position: absolute; top:50%; left:0;}
