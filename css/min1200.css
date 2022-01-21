@@ -61,7 +61,7 @@ ul,li,ol {margin:5px 28px;}
 
       
 
-       #new_box{width:700px; height:600px;}
+       .new_box{width:700px; height:600px;}
 
                .new{width:80%; height:900px; 
 display: flex;
@@ -78,7 +78,7 @@ align-content: center;
 transform: translateY(100px); transition: all 2s; opacity: 0;
 background-color:; }
 
-#new_box {width:700px; height:600px;
+.new_box {width:700px; height:600px;
     display: flex;
     justify-content: center;
     align-items:center;                        
@@ -89,15 +89,15 @@ background-color:; }
         
 
     
-#new_box .box1{width:650px; height: 550px;  background-color: }
-#new_box .box1 img{width:600px; height:auto;  } 
+.new_box .box1{width:650px; height: 550px;  background-color: }
+.new_box .box1 img{width:600px; height:auto;  } 
 
-#new_box .box2{width:500px; height:150px;
+.new_box .box2{width:500px; height:150px;
             font-family: 'Outfit', sans-serif;
             color:white;
             background-color:;}
 
-#new_box .box3{width:450px; height:100px;  
+.new_box .box3{width:450px; height:100px;  
 justify-content: end; background-color: ;}
 
        .box1{width:650px; height: 550px;}
@@ -106,7 +106,7 @@ justify-content: end; background-color: ;}
 
        .box3{margin-top: 20px;}
 
-       #new_box .box1 img {width:600px; height:auto;}
+       .new_box .box1 img {width:600px; height:auto;}
        
 
        .store{min-width:100%; min-height:1100px;}
@@ -310,6 +310,8 @@ section{width:100%; height:2850px; background-color: black;}
 
 #new_box .box3{width:450px; height:100px;  
     justify-content: end; background-color: ;}
+
+iframe{border:none;}    
 
 .store{width:100%; height:1100px; 
      background-color:black; }
